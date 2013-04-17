@@ -55,7 +55,7 @@
     </section>
     <!--hgroup-->
 <!--show the content of article -->
-<%= f.label :content %><%= f.text_field :content, :style => "width: 80%; " %><!--display:none;-->
+    <%= f.hidden_field :content, :style => "width: 80%; " %><!--display:none;-->
 
     <section class="preview" id="articleContent">
       <!--div class="part">
@@ -81,7 +81,7 @@
             <th>
 		    	<%= f.label :status, "顯示？" %>
 		    </th>
-            <td><%= f.check_box :status, {}, [:enable] %>
+            <td><%= f.check_box :status, { :checked => ("checked" if @news.status == "enable") }, "enable" %>
               ( 若無勾選則不發佈 )</td>
           </tr>
         </table>
@@ -91,8 +91,6 @@
     <section class="button"><%= link_to image_tag("check.png") + "完成", 'javascript: void(0);', :onclick => "$(this).parents('form').submit();" %> </section>
     <!--button--> 
 <% end %>
-
-<hr />
 
 
 <script type="text/javascript">

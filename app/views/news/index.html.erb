@@ -1,37 +1,73 @@
-<div class="content_inside" >
-   <div class="topArea" >
-   		<div class="logo"><a href="/" title="梨山華新果園" target="_self"><img src="images/logo.png" width="335" height="85" /></a></div>
-    	<div class="inside_menu">
-              <ul>
-                      <li class="about"><a href="/intro" target="_self" title="果園簡介">果園簡介</a></li>
-                      <li class="product"><a href="/product" target="_self">產品介紹</a>
-                      	<ul>
-                            	<a href="/product?openDiv=peach" title="水蜜桃"><li class="peach">水蜜桃</li></a>
-                                <a href="/product?openDiv=pear" title="梨"><li class="pear">梨</li></a>
-                                <a href="/product?openDiv=persimmon" title="甜柿"><li class="persimmon">甜柿</li></a>
-                        </ul>  
-                      </li>
-                      <li class="buy"><a href="/orders" target="_self" title="線上訂購">線上訂購</a></li>
-                      <li class="message"><a href="/questions" target="_self" title="留言板">留言板</a></li>
-                  </ul>
-            </div>  
-   </div>
-   <div class="contentArea">
-   		<div class="farmer"><img src="images/farmer.png" width="200" height="370" /></div>
-   		<div class="newsBox">
-        	<h1>最新消息：</h1>
-            <div class="newsPoint"></div>
-            <div class="newsList">
-                <ul>
-                  <% @news.each do |news| %>
-                  <% if(!news.newcreate) %>
-                  <li><%= news.created_at.strftime("%Y/%m/%d") %>： <%= link_to news.name, news %></li>
-                  <% end %>
-                  <% end %>
-                </ul>
-                <div class="newsPage">
-                  <%= paginate @news %>
-                </div>
-        	</div> 
-        </div>
-   
+<section>
+<hgroup>
+  <h2>最新消息</h2>
+</hgroup>
+<div id="content">
+  <div class="news">
+    <div class="title">
+      <div class="date"> 2012<br>
+        <span class="md">12.18</span> </div>
+      <h3>美麗島雲端安全科技發表網站應用程式防火牆產品</h3>
+      <img src="images/upd-02.png"> </div>
+    <div class="text">
+      <p>由於個資法的施行，國內中小企業為了防止網站上的機敏資料以及個人資料外洩，對於網站防火牆的需求隨之增加，但面對經濟不景氣以及市面上的網站防火牆價格動輒百萬起跳，國內中小企業即使有心加強網站的防護也難以負擔。 </p>
+      <p>有鑑於此，資安公司美麗島雲端安全科技發表一款平價的網站應用程式防火牆 ( WAF，Web Application Firewall )，並且在設定介面特別採取 KISS ( Keep It Simple，Stupid ) 設計原則，使得 WAF 的設定變得簡單而且易於操作，讓網站安全防護不論是在價格或使用上都變得平易近人。 </p>
+      <p>美麗島雲端安全科技發表的 K.I.S.S WAF 採取雙向的網站防護策略，與單向防護的最大差異在於單向防護只有阻擋來自於外部 (Inbound) 的入站攻擊，對於從內部送出站 ( Outbound ) 的機敏資料與個人資料沒有進行過濾的動作，因此單向防護的 WAF 雖然可以抵擋來自外部的駭客攻擊，卻無法防止機敏資料以及個人資料外洩。單向防護在出站資料把關方面原本就存在先天不足的地方，因此 K.I.S.S 網站防火牆採用雙向防護，能夠有效的防止機敏資料以及個人資料外洩。 </p>
+      <p>網站的攻擊除了會造成系統被入侵，置換網頁，竊取資料以外，還有分散式阻斷服務攻擊 ( DDoS，Distributed Denial Of Service ) 也是常見的駭客手法，因此 K.I.S.S WAF 也支援 DDoS 防護選項，可以偵測分散式阻斷服務攻擊，阻斷攻擊來源。 </p>
+      <p>K.I.S.S WAF 支援監控日誌資料庫，可即時查詢與檢視攻擊來源與內容，並且提供可篩選日期時間、來源 IP、連線狀態等等的連線紀錄，還有包括正常連線與阻擋連線比例的統計圖表，提供用戶立即分析攻擊來源以及攻擊內容。 </p>
+      <p>美麗島雲端安全科技<br>
+        FormasaAuditor Cloud Vulnerability Technology.</p>
+    </div>
+  </div>
+  <div class="news">
+    <div class="title">
+      <div class="date"> 2012<br>
+        <span class="md">12.18</span> </div>
+      <h3>美麗島雲端安全科技發表網站應用程式防火牆產品</h3>
+      <img src="images/upd-02.png"> </div>
+    <div class="text">
+      <p>由於個資法的施行，國內中小企業為了防止網站上的機敏資料以及個人資料外洩，對於網站防火牆的需求隨之增加，但面對經濟不景氣以及市面上的網站防火牆價格動輒百萬起跳，國內中小企業即使有心加強網站的防護也難以負擔。 </p>
+      <p>有鑑於此，資安公司美麗島雲端安全科技發表一款平價的網站應用程式防火牆 ( WAF，Web Application Firewall )，並且在設定介面特別採取 KISS ( Keep It Simple，Stupid ) 設計原則，使得 WAF 的設定變得簡單而且易於操作，讓網站安全防護不論是在價格或使用上都變得平易近人。 </p>
+      <p>美麗島雲端安全科技發表的 K.I.S.S WAF 採取雙向的網站防護策略，與單向防護的最大差異在於單向防護只有阻擋來自於外部 (Inbound) 的入站攻擊，對於從內部送出站 ( Outbound ) 的機敏資料與個人資料沒有進行過濾的動作，因此單向防護的 WAF 雖然可以抵擋來自外部的駭客攻擊，卻無法防止機敏資料以及個人資料外洩。單向防護在出站資料把關方面原本就存在先天不足的地方，因此 K.I.S.S 網站防火牆採用雙向防護，能夠有效的防止機敏資料以及個人資料外洩。 </p>
+      <p>網站的攻擊除了會造成系統被入侵，置換網頁，竊取資料以外，還有分散式阻斷服務攻擊 ( DDoS，Distributed Denial Of Service ) 也是常見的駭客手法，因此 K.I.S.S WAF 也支援 DDoS 防護選項，可以偵測分散式阻斷服務攻擊，阻斷攻擊來源。 </p>
+      <p>K.I.S.S WAF 支援監控日誌資料庫，可即時查詢與檢視攻擊來源與內容，並且提供可篩選日期時間、來源 IP、連線狀態等等的連線紀錄，還有包括正常連線與阻擋連線比例的統計圖表，提供用戶立即分析攻擊來源以及攻擊內容。 </p>
+      <p>美麗島雲端安全科技<br>
+        FormasaAuditor Cloud Vulnerability Technology.</p>
+    </div>
+  </div>
+  <div class="news">
+  <div class="title">
+    <div class="date"> 2012<br>
+      <span class="md">12.18</span> </div>
+    <h3>美麗島雲端安全科技發表網站應用程式防火牆產品</h3>
+    <img src="images/upd-02.png"> </div>
+  <div class="text">
+    <p>由於個資法的施行，國內中小企業為了防止網站上的機敏資料以及個人資料外洩，對於網站防火牆的需求隨之增加，但面對經濟不景氣以及市面上的網站防火牆價格動輒百萬起跳，國內中小企業即使有心加強網站的防護也難以負擔。 </p>
+    <p>有鑑於此，資安公司美麗島雲端安全科技發表一款平價的網站應用程式防火牆 ( WAF，Web Application Firewall )，並且在設定介面特別採取 KISS ( Keep It Simple，Stupid ) 設計原則，使得 WAF 的設定變得簡單而且易於操作，讓網站安全防護不論是在價格或使用上都變得平易近人。 </p>
+    <p>美麗島雲端安全科技發表的 K.I.S.S WAF 採取雙向的網站防護策略，與單向防護的最大差異在於單向防護只有阻擋來自於外部 (Inbound) 的入站攻擊，對於從內部送出站 ( Outbound ) 的機敏資料與個人資料沒有進行過濾的動作，因此單向防護的 WAF 雖然可以抵擋來自外部的駭客攻擊，卻無法防止機敏資料以及個人資料外洩。單向防護在出站資料把關方面原本就存在先天不足的地方，因此 K.I.S.S 網站防火牆採用雙向防護，能夠有效的防止機敏資料以及個人資料外洩。 </p>
+    <p>網站的攻擊除了會造成系統被入侵，置換網頁，竊取資料以外，還有分散式阻斷服務攻擊 ( DDoS，Distributed Denial Of Service ) 也是常見的駭客手法，因此 K.I.S.S WAF 也支援 DDoS 防護選項，可以偵測分散式阻斷服務攻擊，阻斷攻擊來源。 </p>
+    <p>K.I.S.S WAF 支援監控日誌資料庫，可即時查詢與檢視攻擊來源與內容，並且提供可篩選日期時間、來源 IP、連線狀態等等的連線紀錄，還有包括正常連線與阻擋連線比例的統計圖表，提供用戶立即分析攻擊來源以及攻擊內容。 </p>
+    <p>美麗島雲端安全科技<br>
+      FormasaAuditor Cloud Vulnerability Technology.</p>
+  </div>
+  </div>
+</div>
+<!--content--> 
+</section>
+
+<script type="text/javascript">
+	$(function(){
+		$('.title').click(function(){
+			$(this).addClass('active').parents('.news').siblings().children().removeClass('active');
+			var $side_text = $(this).next('.text');
+			if(!$side_text.is(':visible')){
+				$('.news .text:visible').slideUp();
+			}
+			$side_text.slideToggle();
+		}).siblings().hide();
+		
+	$('.title').eq(0).addClass('active').next('.text').show()
+	});
+	
+	
+</script>

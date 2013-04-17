@@ -1,64 +1,64 @@
-<div id="main" class="right">
-  <div class="main-list">
-    <h1>建立管理者</h1>
 
-    <%= form_for(@admin, :url => admin_createAdmin_path(@admin, :locale => I18n.locale)) do |f| %>
-    <div class="field">
-      <%= f.label :username, "使用者ID" %><br />
-      <%= f.text_field :username, :autocomplete => "off", :class => "validate" %>
-    </div>
-    <div class="field">
-      <%= f.label :password, "密碼" %><br />
-      <%= f.password_field :password, :autocomplete => "off", :class => "validate" %>
-    </div>
-    <div class="field">
-      <%= f.label :name, "使用者名稱" %><br />
-      <%= f.text_field :name, :autocomplete => "off", :class => "validate" %>
-    </div>
+<% if flash[:error] %>
+<script>
+    $(function() {
+	    Alertify.log.error('同樣的帳號已經註冊過了');
+    })
+</script>
+<% end %>
     
-    <div id="error">
-    <% if flash[:error] %>
-      <p class="error">同樣的帳號已經註冊過了</p>
-    <% end %>
-    </div>
-    
-    <div class="actions">
-      <%= f.submit "新增管理者" %>
-    <br />
-    </div>
-    <% end %>
-
-    <br />
-
-    <div class="main-title">
+<%= form_for(@admin, :url => admin_createAdmin_path(@admin, :locale => I18n.locale)) do |f| %>
+<section class="text text-edit">
+  <div class="quarter">
     <table width="100%" border="0" cellspacing="0" cellpadding="0">
-      <tr class="main-list-title">
-        <th>建立日期</th>
-        <th>使用者帳號</th>
-        <th>使用者名稱</th>
-        <th>刪除</th>
+      <tr>
+        <th valign="top"><%= f.label :name, "姓名" %></th>
+        <td><%= f.text_field :name, :autocomplete => "off", :class => "validate", :placeholder => "請輸入使用者姓名" %></td>
       </tr>
+    </table>
+  </div>
+  <div class="remainder">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <th valign="top"><%= f.label :username, "帳號" %></th>
+        <td><%= f.text_field :username, :autocomplete => "off", :class => "validate", :placeholder => "請輸入使用者登入帳號"  %></td>
+      </tr>
+    </table>
+  </div>
+  <div class="half">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <th valign="top"><%= f.label :password, "密碼" %></th>
+        <td><%= f.password_field :password, :autocomplete => "off", :class => "validate" %></td>
+      </tr>
+    </table>
+  </div>
+</section>
+<section class="button"><a href="javascript: $('#new_admin').submit();"><img src="images/add.png">新增帳號</a> </section>
+<% end %>
+<!--button-->
+<section class="list">
+  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <th align="center" class="x2">使用者姓名</th>
+      <th align="left">使用者帳號</th>
+      <th align="center" class="x1">刪除</th>
+    </tr>
       <% @admins.each do |admin| %>
       <% if(!admin.master) %>
-      <tr>
-        <td><%= admin.created_at.to_date %></td>
-        <td><%= admin.username %></td>
-        <td><%= admin.name %></td>
-        <td><%= link_to 'Destroy', ("/admin/deleteAdmin/"+admin.id.to_s), :method => :delete, data: { confirm: '確定刪除該使用者？' } %></td>
-      </tr>
+	    <tr>
+	      <td align="center"><%= admin.name %></td>
+	      <td align="left"><%= admin.username %></td>
+	      <td align="center"><%= link_to image_tag("delete.png"), ("/admin/deleteAdmin/"+admin.id.to_s), :method => :delete, data: { confirm: '確定刪除該使用者？' } %></td>
+	    </tr>
       <% end %>
       <% end %>
-    </table>
-    </div>
-    <!--main-title--> 
-
-  </div>
-</div>
-<!--main--> 
+  </table>
+</section>
+<!--list--> 
 
 <script type="text/javascript">
 $(document).ready(function() {
-  $("#users").addClass("active");
   $("#new_admin").submit(function(){
     var submit = true;
     var errormsg = "";

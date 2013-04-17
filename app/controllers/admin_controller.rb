@@ -4,6 +4,10 @@ class AdminController < ApplicationController
     @admins = Admin.all
   	@admin = Admin.new
   end
+  
+  def deleteAdmin 
+  	destroy
+  end
 
   def edit
     @admin = Admin.find(session[:adminID])

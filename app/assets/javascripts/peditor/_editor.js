@@ -22,7 +22,7 @@ var editor = {
 			stop: function( event, ui ) {editor.save();}
 		});
 
-		var editorList = $("<ul class=\"x2\">");
+		var editorList = $("<ul class=\"x2 editorPanel\">");
 		editorList.addClass("editorList");
 
 		var editorContent = $("<section>");
@@ -67,7 +67,8 @@ var editor = {
 			beforeSubmit: function(a,f,o) {
 				o.dataType = 'json';
 			},
-			complete: function(XMLHttpRequest, textStatus) {}
+			complete: function(XMLHttpRequest, textStatus) {
+			editor.alert('與伺服器同步完成', 'success');}
 		});
 	},
 	pack: function(upload){
@@ -101,7 +102,7 @@ var editor = {
 		var contentEle = $("#"+editor.settings.articleModel+"_content");
 		
 		if(contentEle && contentEle.val()){
-			var article = JSON.parse(contentEle.val()).article;
+			var article = JSON.parse(contentEle.val());
 			for(var i = 0, length = article.length; i < length; i++)
 			{
 				var paragraph = article[i];				

@@ -11,7 +11,7 @@
     
       <% @news.each do |news| %>
 	    <tr>
-	      <td class="x0"><%= news.date.to_s %></td>
+	      <td class="x0"><%= news.date.to_s(:date) %></td>
 	      <td>
 	      	  <%= link_to news.name, admin_news_path(news) %>
 	          <% if( news.status != 'enable') %>
