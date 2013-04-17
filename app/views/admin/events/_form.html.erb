@@ -1,0 +1,80 @@
+<%= form_for([:admin, @event]) do |f| %>
+  <% if @event.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@event.errors.count, "error") %> prohibited this event from being saved:</h2>
+
+      <ul>
+      <% @event.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+
+    <section class="title">
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <th><%= f.label :title, "活動名稱" %></th>
+          <td><%= f.text_field :title, :placeholder => "請輸入活動名稱" %></td>
+        </tr>
+      </table>
+    </section>
+    <!--title-->
+    <section class="text text-edit">
+      <div class="half">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>    
+            <th valign="top"><%= f.label :date, "日期：" %></th>
+            <td><%= f.datetime_select :date, :placeholder => "請選擇活動日期" %></td>
+          </tr>
+        </table>
+      </div>
+      <div class="half">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <th valign="top"><%= f.label :period, "時間：" %></th>
+            <td><%= f.text_field :period, :placeholder => "請手動輸入時間" %></td>
+          </tr>
+        </table>
+      </div>
+      <div class="one">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <th valign="top"><%= f.label :location, "地點：" %></th>
+            <td><%= f.text_field :location, :placeholder => "請輸入地點" %></td>
+          </tr>
+        </table>
+      </div>
+      <div class="one">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <th valign="top"><%= f.label :description, "內容：" %></th>
+            <td><%= f.text_area :description, :class => "autogrow" %></td>
+          </tr>
+        </table>
+      </div>
+      <div class="one">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <th valign="top"><%= f.label :link, "地點：" %></th>
+            <td><%= f.text_field :link, :placeholder => "請輸入連結" %></td>
+          </tr>
+        </table>
+      </div>
+      <div class="one">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <th><%= f.label :status, "顯示？" %></th>
+            <td>
+            	<%= f.check_box :status, {:id => "checkbox"} ,["enable"] %>
+              ( 若無勾選則不發佈 )</td>
+          </tr>
+        </table>
+      </div>
+    </section>
+    <!--text-->
+    <section class="button"><a href="javascript:$('#eventSubmit').click();"><%= image_submit_tag "save.png", :id => "eventSubmit" %> 儲存</a><a href="<%= admin_events_path %>"><img src="<%= image_path "cancel.png" %>">取消</a> </section>
+    <!--button--> 
+<% end %>
+

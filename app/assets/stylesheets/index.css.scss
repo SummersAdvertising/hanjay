@@ -1,0 +1,115 @@
+body{min-width:1024px;font:300 15px "微軟正黑體";line-height:1.7em;-webkit-font-size-adjust:none}
+a{text-decoration:none;font:300 15px "微軟正黑體";
+-webkit-font-size-adjust:none;
+-webkit-transition:all .3s ease;
+-moz-transition:all .3s ease}
+
+section{width:1024px;margin:0 auto}
+section:after{clear:both}
+
+header{position:fixed;width:100%;height:85px;background:image-url("idx-03-bg.jpg") 0 bottom repeat-x #fff;padding:18px 0 0 0}
+header section{}
+header h1{text-indent:-7777px;float:left}
+header h1 a{display:block;width:207px;height:67px;background:image-url("idx-h1.jpg")}
+header nav{float:right}
+header nav a{display:block;float:right;color:#3d3b3b;margin:0 20px;height:67px;padding:30px 0 0 0}
+header nav a:hover{border-bottom:4px solid #FF7900;color:#000}
+
+article h3{font:300 50px "微軟正黑體";line-height:1.7em}
+
+/*-藍1-*/
+#intro{background:image-url("idx-03-bg.jpg") 0 bottom repeat-x #002D92;padding:85px 0 0 0}
+#intro section{height:460px;background:image-url("idx-03.jpg") 0 0 no-repeat;padding:110px 0 0 515px}
+#intro p{color:#fff;padding:15px 0 30px 0}
+#intro h3{background:image-url("idx-02.png");width:480px;height:45px;text-indent:-7777px}
+#actlink{margin:35px 0 0 0}
+#actlink a{color:#fbc400;text-decoration:underline}
+#actlink a:hover{color:#FEDD00;text-decoration:none}
+
+#btn a{display:block;width:273px;height:58px;background:image-url("idx-01.png") 0 0 no-repeat;border-radius:5px}
+#btn a:hover{box-shadow:0 0 10px #FEDD00}
+#btn a:active{position:relative;top:1px}
+
+/*-標1-*/
+#service-1-h2{background:#212121}
+#service-1-h2 section{height:133px;background:image-url("idx-04-h2.jpg") 0 center no-repeat}
+
+/*-黃1-*/
+#service-1-1{background:#FAAB00}
+#service-1-1 section{height:545px;background:image-url("idx-04-bg.jpg") 690px 0 no-repeat,image-url("idx-04.jpg") 0 center no-repeat;padding:75px 0 0 515px}
+#service-1-1 p{padding:0 0 30px 0;width:500px}
+#service-1-1 p a{color:#0000ff;text-decoration:underline}
+#service-1-1 p a:hover{text-decoration:none}
+#service-1-1 li {padding:0 0 25px 25px;background:image-url("idx-04-plus.jpg") 0 7px no-repeat}
+#service-1-1 li a{font-size:20px;color:#000}
+#service-1-1 li a:hover{padding:0 0 0 5px;color:#034F89}
+
+/*-黃2-*/
+#service-1-2{background:#FBC12B}
+#service-1-2 section{height:495px;background:image-url("idx-05-bg.jpg") 120px 0 no-repeat,image-url("idx-05.jpg") right center no-repeat;padding:75px 0 0 0}
+#service-1-2 p{padding:0 0 30px 0;width:500px}
+#service-1-2 p a{color:#0000ff;text-decoration:underline}
+#service-1-2 p a:hover{text-decoration:none}
+#service-1-2 li {padding:0 0 25px 25px;background:image-url("idx-05-plus.jpg") 0 7px no-repeat}
+#service-1-2 li a{font-size:20px;color:#000}
+#service-1-2 li a:hover{padding:0 0 0 5px;color:#034F89}
+
+/*-標2-*/
+#service-2-h2{background:#fff}
+#service-2-h2 section{height:133px;background:image-url("idx-06-h2.jpg") 0 center no-repeat}
+
+/*-藍2-*/
+#service-2-1{background:#0C81E8}
+#service-2-1 section{height:495px;background:image-url("idx-06-bg.jpg") 690px 0 no-repeat,image-url("idx-06.jpg") 50px center no-repeat;padding:75px 0 0 515px;color:#fff}
+#service-2-1 p{padding:0 0 30px 0;width:500px}
+#service-2-1 p a{color:#ffde00;text-decoration:underline}
+#service-2-1 p a:hover{text-decoration:none}
+#service-2-1 li {padding:0 0 25px 25px;background:image-url("idx-06-plus.jpg") 0 7px no-repeat}
+#service-2-1 li a{font-size:20px;color:#fff}
+#service-2-1 li a:hover{padding:0 0 0 5px;color:#ffde00}
+
+/*-藍3-*/
+#service-2-2{background:#2391F7}
+#service-2-2 section{height:495px;background:image-url("idx-07.jpg") right center no-repeat;background:image-url("idx-07-bg.jpg") 120px 0 no-repeat,image-url("idx-07.jpg") right center no-repeat;padding:75px 0 0 0;color:#fff}
+#service-2-2 p{padding:0 0 30px 0;width:500px}
+#service-2-2 p a{color:#ffde00;text-decoration:underline}
+#service-2-2 p a:hover{text-decoration:none}
+#service-2-2 li {padding:0 0 25px 25px;background:image-url("idx-07-plus.jpg") 0 7px no-repeat}
+#service-2-2 li a{font-size:20px;color:#fff}
+#service-2-2 li a:hover{padding:0 0 0 5px;color:#ffde00}
+
+/*-黑1-*/
+#partner{background:#4A4A4A}
+#partner section{height:590px;background:image-url("idx-08.jpg") 50px center no-repeat;padding:75px 0 0 515px;color:#fff}
+#partner p{padding:0 0 30px 0;width:500px}
+#partner ul{width:500px;overflow:hidden}
+#partner li{float:left;width:250px;padding:0 0 25px 25px;background:image-url("idx-08-plus.jpg") 0 7px no-repeat;font-size:20px}
+
+#update{overflow:hidden}
+#update section{height:330px;padding:75px 0}
+#update div{width:512px;float:left;font-size:12px}
+#update a{font-size:12px;color:#000}
+#update a:hover{border-bottom:1px solid #50ABFC}
+#update h4{color:#004584;font:300 40px "微軟正黑體";height:60px;padding:0 0 0 30px;background:image-url("idx-09-h4.jpg") 0 15px no-repeat;text-shadow:0 1px 0 #D4DAE4}
+
+#about{background:#F0F0F0}
+#found{text-align:center;padding:75px 0;border-bottom:1px solid #C8C8C8}
+#found h4{font:300 60px "微軟正黑體";height:170px;background:image-url("idx-10.jpg") center 0 no-repeat;padding:70px 0 0 0;}
+#idea{border-top:1px solid #fff;padding:0 0 75px 0}
+#idea h4{color:#0a306f;font:300 25px "微軟正黑體";text-align:center;position:relative;top:-17px;width:135px;margin:0 auto;background:#F0F0F0;text-shadow:0 1px 0 #fff}
+#idea-box{overflow:hidden;padding:40px 0 0 0}
+.box{float:left;width:30%}
+.box h5{text-align:center;color:#2e2e2e;font:300 30px "微軟正黑體";height:50px}
+.box strong{background:#C1F078;padding:2px 5px;font-weight:300}
+
+aside{background:#001B56}
+aside section{padding:60px 0 0 130px;height:325px;background:image-url("idx-aside-bg.jpg") 130px 0 no-repeat,image-url("aside-bg.jpg") 690px center no-repeat}
+aside h6{color:#4f86ff;font:300 27px "微軟正黑體";height:35px}
+aside nav{color:#fff;height:115px}
+aside a{color:#fff;font-size:14px}
+aside a:hover{color:#4f86ff}
+aside #info{color:#fff;font-size:13px;line-height:1.7em;padding:45px 0 0 0;background:image-url("aside-01.jpg") 0 0 no-repeat}
+
+footer{background:#04163E;color:#4b72ad;font-size:12px}
+footer section{padding:10px 0 0 130px;height:40px;}
+footer a{color:#4b72ad;font-size:12px}

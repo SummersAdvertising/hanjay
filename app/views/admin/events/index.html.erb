@@ -1,0 +1,30 @@
+<section class="category">
+  <ul>
+    <li <%= ' class="active"'.html_safe if params[:status].nil? || params[:status] == "enable" %> ><a href="<%= admin_events_path( :status => "enable" ) %>">進行中</a></li>
+    <li <%= ' class="active"'.html_safe if params[:status] == "disable" %> ><a href="<%= admin_events_path( :status => "disable" ) %>">未發佈</a></li>
+    <li <%= ' class="active"'.html_safe if params[:status] == "expired" %> ><a href="<%= admin_events_path( :status => "expired" ) %>">已過期</a></li>
+  </ul>
+</section>
+<!--category-->
+<section class="button"> <a href="<%= new_admin_event_path %>"><img src="<%= image_path("add.png") %>">新增活動</a> </section>
+<!--button-->
+<section class="list">
+
+  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <th align="left" class="x0 x2">日期</th>
+      <th align="left">活動名稱</th>
+      <th align="left" class="x0 x1">編輯</th>
+      <th align="left" class="x1">刪除</th>
+    </tr>
+    
+	<% @events.each do |event| %>
+	  <tr>
+	      <td class="x0"><%= event.date.to_s(:date) %></td>
+	      <td><a href="#"><%= link_to event.title, admin_event_path(event) %></a></td>
+	      <td class="x0"><%= link_to image_tag("edit.png"), edit_admin_event_path(event) %></td>
+	      <td class="delete"><%= link_to image_tag("delete.png"), admin_event_path( event ), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+	  </tr>
+	<% end %>
+  </table>
+</section>

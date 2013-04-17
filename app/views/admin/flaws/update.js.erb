@@ -1,0 +1,2 @@
+$("#flaw_<%= @flaw.id %>_status").attr('src', '<%= image_path( (@flaw.status == 'enable' ? "check.png" : "cancel.png") ) %>').parent().attr('href', '<%= admin_flaw_path( @flaw, "flaw[status]" => (@flaw.status == 'enable' ? "disable" : "enable")  ) %>');
+Alertify.log.success('更新完成');

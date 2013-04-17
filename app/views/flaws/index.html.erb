@@ -1,0 +1,46 @@
+<%= stylesheet_link_tag "bulletin" %>
+<section> 
+  <hgroup>
+  <h2>安全弱點通報</h2>
+  </hgroup>
+  <div id="content">
+  
+  <% 
+  current_day = false
+  @flaws.each do | flaw | 
+  
+  		  new_block = false
+		  if current_day != flaw.date.at_beginning_of_day 			  
+			  new_block = true
+			  if current_day !=  false %>		  	
+			    </ul></td>
+			  </tr>
+			</table>
+		  	<% end
+		  end
+		  		  
+		  current_day = flaw.date.at_beginning_of_day
+		  
+		  if new_block	%>
+		  	
+			  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+			  <tr>
+			    <th width="15%" align="left" valign="top">
+			    <div id="date">
+			    <span class="y"><%= flaw.date.year %></span><br>
+			    <span class="md"><%= "#{flaw.date.month}/#{flaw.date.day}" %></span>
+			    </div></th>
+			    <td width="85%"><ul>
+    
+		  <% end %>
+		  
+			    <li><%= flaw.issue %></li>
+    
+
+  <% end %>
+
+			    </ul></td>
+			  </tr>
+			</table>
+  </div> <!--content-->
+  </section>

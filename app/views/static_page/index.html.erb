@@ -1,0 +1,202 @@
+<!doctype html>
+<html>
+<head>
+<!--[if lt IE 9]>
+<script src="js/html5.js"></script>
+<![endif]-->
+<meta charset="utf-8">
+<title>無標題文件</title>
+<%= stylesheet_link_tag "reset", :media => :all %>
+<%= stylesheet_link_tag "application" %>
+<%= stylesheet_link_tag "index", :media => :all %>
+
+<%= javascript_tag "application" %>
+<script>
+$(document).ready(function(){
+	$(".iframe").colorbox({iframe:true, width:"80%", height:"80%"});
+});
+</script>
+</head>
+
+<body>
+
+<header _height="none">
+  <section>
+    <h1><a href="<%= root_url %>">HANJAY</a></h1>
+    <nav> <a href="<%= root_url + "#about" %>">關於漢杰</a> <a href="<%= news_index_path %>">最新消息</a> <a href="<%= page_path( :id => "support" ) %>">支援與服務</a> <a href="<%= root_url + "#partner" %>">夥伴與方案</a> <a href="<%= root_url + "#intro" %>">漢杰服務</a></nav>
+  </section>
+</header>
+
+<article id="intro">
+  <section>
+    <h3>網路安全風險診斷專家</h3>
+    <p>透過量化、視覺化的資安風險評量報告，迅速明瞭目前的網路環境狀況<br>
+      漢杰科技團隊擁有跨國資訊安全服務經驗與獨立安全軟體開發鑑識能力<br>
+      提供內網《資料外洩、殭屍電腦、間諜程式、APT 攻擊》查核與電腦鑑<br>
+      識服務</p>
+    <div id="btn"><a href="#"></a> </div>
+    <div id="actlink"><%= link_to "近期活動：#{@event.title}⋯more", @event  if !@event.nil? %></div>
+  </section>
+</article>
+<h2 id="service-1-h2">
+<a id="service-link" style="position:relative;top:-85px"></a>
+  <section> </section>
+</h2>
+<article id="service-1-1">
+  <section>
+    <h3>資料外洩查核服務</h3>
+    <p>漢杰科技提供機敏資料外洩查核與防護方案，透過資料庫安全存取稽核、Web 應用層穿透威脅分析，安全弱點控制，可積極協助與管制各樣潛藏的資料外洩風險 ... <a href="#">more</a></p>
+    <ul>
+      <li><a href="#" class="iframe">資料庫安全稽核</a></li>
+      <li><a href="#" class="iframe">Web 應用層穿透威脅分析</a></li>
+      <li><a href="#" class="iframe">資料庫高風險弱點查核控制</a></li>
+      <li><a href="#" class="iframe">機敏(個)資料盤點、風險評鑑與加密防護</a></li>
+      <li><a href="#" class="iframe">機敏資料使用、管理、銷毀驗證分析</a></li>
+    </ul>
+  </section>
+</article>
+<article id="service-1-2">
+  <section>
+    <h3>內網惡意流量分析服務</h3>
+    <p>漢杰科技協助客戶進行網路應用層惡意流量鑑識分析，此分析可清楚診斷內網不當流量來源與活動分佈，掃除殭屍電腦植入與 APT 攻擊威脅，並積極提供內網 QoS 管理，可滿足網路營運不中斷，不延遲的目標 ... <a href="#">more</a></p>
+    <ul>
+      <li><a href="#" class="iframe">分析目標網路，高風險惡意流量來源與影響分佈</a></li>
+      <li><a href="#" class="iframe">警示網路中存在的殭屍電腦 (Botnet) 與不明 Tunnel 活動</a></li>
+      <li><a href="#" class="iframe">分析目標網路 Top 10 的各項高流量應用行為</a></li>
+      <li><a href="#" class="iframe">提出目標網路可修正之風險控管措施</a></li>
+    </ul>
+  </section>
+</article>
+<h2 id="service-2-h2">
+  <section> </section>
+</h2>
+<article id="service-2-1">
+  <section>
+    <h3>安全弱點掃描服務</h3>
+    <p>漢杰科技提供安全弱點掃描服務，可自雲端與近端2種方式進行，並特別針對高風險弱點做覆查與修補建議，風險差異性分析報告亦可滿足客戶 ISO27001 / 20000 之驗證要求。 ... <a href="#">more</a></p>
+    <ul>
+      <li><a href="#" class="iframe">提供 IPv4/IPv6 雙協定弱點分析報告</a></li>
+      <li><a href="#" class="iframe">雲端掃描或隔離環境之近端掃描</a></li>
+      <li><a href="#" class="iframe">差異性弱點報表與修補追蹤</a></li>
+      <li><a href="#" class="iframe">高風險弱點複驗</a></li>
+    </ul>
+  </section>
+</article>
+<article id="service-2-2">
+  <section>
+    <h3>電腦鑑識與數位證據服務</h3>
+    <p>提供資訊資產管理與電腦鑑識服務，針對機密敏感性資料的不當使用提供預防、偵測、回應3項策略性建議與實務稽查分析，可滿足客戶數位證據的法院舉證效力。 ... <a href="#">more</a></p>
+    <ul>
+      <li><a href="#" class="iframe">數位資料封存、刪除重建與無汙染證據保全</a></li>
+      <li><a href="#" class="iframe">特徵資料存取軌跡與鑑識</a></li>
+      <li><a href="#" class="iframe">系統拋轉比對分析(供應商與客戶)</a></li>
+      <li><a href="#" class="iframe">高風險目標鑑識預防、合理性偵測與防護線建立</a></li>
+    </ul>
+  </section>
+</article>
+<article id="partner">
+<a id="partner-link" style="position:relative;top:-85px"></a>
+  <section>
+    <h3>夥伴與方案</h3>
+    <p>漢杰科技與多家業界知名技術公司合作，提供最適宜的工具與產品解決方案</p>
+    <ul>
+      <li>amXecure</li>
+      <li>Encase</li>
+      <li>BlueCoat</li>
+      <li>FormasaAuditor</li>
+      <li>broadweb</li>
+      <li>KPMG</li>
+      <li>chalettech</li>
+      <li>PaloAlto</li>
+      <li>Citrix</li>
+      <li>trustview</li>
+      <li>cobrasoinc</li>
+      <li>websencs</li>
+      <li>CPS Systems</li>
+    </ul>
+  </section>
+</article>
+<article id="update">
+  <section>
+    <div id="bulletin">
+      <h4>安全弱點通報</h4>
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td width="22%">+   2012/12/18</td>
+          <td width="78%">RealPlayer 16.0.0.282 之前版本多個弱點</td>
+        </tr>
+        <tr>
+          <td>+   2012/12/13</td>
+          <td>APSB12-27:Adobe Flash 播放器安全更新</td>
+        </tr>
+        <tr>
+          <td>+   2012/12/13</td>
+          <td>Google Chrome 23.0.1271.97 之前版本多個弱點</td>
+        </tr>
+        <tr>
+          <td>+   2012/12/12</td>
+          <td>MS12-082:DirectPlay 允許遠端執行程式碼 (2770660)</td>
+        </tr>
+        <tr>
+          <td>+   2012/12/12</td>
+          <td>MS12-081:Windows 檔案處理元件允許遠端執行程式碼</td>
+        </tr>
+      </table>
+    </div>
+    <div id="news">
+      <h4>最新消息</h4>
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td width="22%">+   2012/12/18</td>
+          <td width="78%"><a href="#">Chalet Tech於英國Tech Trailblazers Awards新創大賞獲封雙銀</a></td>
+        </tr>
+        <tr>
+          <td>+   2012/12/17</td>
+          <td><a href="#">Chalet Tech榮獲 『2012經濟部育成亮點企業獎』</a></td>
+        </tr>
+        <tr>
+          <td>+   2012/10/22</td>
+          <td><a href="#">美麗島雲端安全科技發表網站應用程式防火牆產品</a></td>
+        </tr>
+        <tr>
+          <td>+   2012/09/22</td>
+          <td><a href="#">CPS共同供應契約電腦軟體上架囉!![CPS共同供應契約電腦軟體(LP5-101002)]</a></td>
+        </tr>
+      </table>
+    </div>
+  </section>
+</article>
+<article id="about">
+  <section>
+    <div id="found">
+      <h4>關於漢杰科技</h4>
+      <p>漢杰科技成立於2012年，主要營業核心在於提供企業與政府單位人性化的資訊安全解決方案。<br>
+        漢杰科技的成員皆是資訊安全市場早期的拓荒者，成員普遍擁有十年以上資訊安全的資歷，服務客<br>
+        群遍及亞洲地區，是台灣少數擁用跨國資訊安全專案與獨立安全軟體開發經驗的技術服務團隊。</p>
+    </div>
+    <!--found-->
+    <div id="idea">
+      <h4>經營理念</h4>
+      <div id="idea-box">
+        <div class="box">
+          <h5>誠信</h5>
+          <p>最基本也最重要的理念。我們說真話；我們不誇張，同時我們絕不容許貪污，<strong>一旦做出承諾必定全力以赴</strong>，我們用人的首要條件是品格與才能，絕不是「關係」。</p>
+        </div>
+        <div class="box" style="margin:0 5%">
+          <h5>承諾</h5>
+          <p>漢杰科技堅持信守對客戶、供應商、員工、股東及社會的承諾。漢杰科技相信成功來自於付出與回饋，<strong>信守與權益關係人的承諾是漢杰科技的清楚信念</strong>，漢杰科技會盡力照顧所有權益關係人的權益。</p>
+        </div>
+        <div class="box">
+          <h5>客戶信任</h5>
+          <p>客戶是我們的夥伴，因此我們<strong>優先考慮客戶的需求</strong>。我們努力與客戶建立深遠的夥伴關係，深耕與服務並且成為客戶信賴的長期夥伴。</p>
+        </div>
+      </div>
+      <!--idea-box--> 
+    </div>
+    <!--idea--> 
+  </section>
+</article>
+
+<%= render :partial => "layouts/footer" %>
+</body>
+</html>

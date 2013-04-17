@@ -1,0 +1,15 @@
+article section{background:image-url("act-01.jpg") right 50px no-repeat}
+
+#content{width:785px;padding:50px 0}
+.title{position:relative;height:95px;overflow:hidden;padding:25px 0 0 0;margin:0 0 25px 0}
+.title .date{background:#3194EA;float:left;height:70px;width:80px;color:#fff;padding:10px 0 0 10px}
+.title .md{font-size:20px}
+.title h3{height:70px;float:right;width:700px;padding:22px 0 0 20px;color:#004098;font:300 22px "微軟正黑體";}
+.title img{position:absolute;top:50px;left:71px}
+
+.news:nth-child(1) .title{padding:0;height:70px}
+.news:nth-child(1) img{top:25px}
+
+.text{margin:0 0 0 106px;padding:0 0 25px 0;color:#434343;border-bottom:1px dashed #D3D3D3}
+.text a{display:block;width:202px;height:47px;background:image-url("act-02.jpg")}
+.text a:hover{background:image-url("act-02-h.jpg")}

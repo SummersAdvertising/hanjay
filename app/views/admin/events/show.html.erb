@@ -1,0 +1,60 @@
+<section class="hgroup">
+  <h2>預覽頁面</h2>
+  <p>-進行中</p>
+</section>
+<!--hgroup-->
+<section class="title">
+  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <th><%= @event.date.to_s( :date ) %></th>
+      <td><%= @event.title %></td>
+    </tr>
+  </table>
+</section>
+<!--title-->
+<section class="text text-show">
+  <div class="one">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <th valign="top">時間：</th>
+        <td><%= @event.period %></td>
+      </tr>
+    </table>
+  </div>
+  <div class="one">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <th valign="top">地點：</th>
+        <td><%= @event.location %></td>
+      </tr>
+    </table>
+  </div>
+  <div class="one">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <th valign="top">內容：</th>
+        <td><%= @event.description %></td>
+      </tr>
+    </table>
+  </div>
+  <div class="one">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <th>顯示？</th>
+        <td><%= @event.status == 'enable' ? '是' : '否' %></td>
+      </tr>
+    </table>
+  </div>
+</section>
+<!--text-->
+<section class="button"> <%= link_to image_tag("edit.png") + "編輯", edit_admin_event_path(@event) %><%= link_to image_tag("back.png") + "返回", admin_events_path %></section>
+<!--button--> 
+</article>
+<% if flash[ :notice ] %>
+<script>
+	$(function() {
+		Alertify.log.success("<%= flash[ :notice ] %>");
+	})	
+</script>
+<% end %>
+  

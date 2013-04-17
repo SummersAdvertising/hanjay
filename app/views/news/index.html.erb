@@ -1,0 +1,37 @@
+<div class="content_inside" >
+   <div class="topArea" >
+   		<div class="logo"><a href="/" title="梨山華新果園" target="_self"><img src="images/logo.png" width="335" height="85" /></a></div>
+    	<div class="inside_menu">
+              <ul>
+                      <li class="about"><a href="/intro" target="_self" title="果園簡介">果園簡介</a></li>
+                      <li class="product"><a href="/product" target="_self">產品介紹</a>
+                      	<ul>
+                            	<a href="/product?openDiv=peach" title="水蜜桃"><li class="peach">水蜜桃</li></a>
+                                <a href="/product?openDiv=pear" title="梨"><li class="pear">梨</li></a>
+                                <a href="/product?openDiv=persimmon" title="甜柿"><li class="persimmon">甜柿</li></a>
+                        </ul>  
+                      </li>
+                      <li class="buy"><a href="/orders" target="_self" title="線上訂購">線上訂購</a></li>
+                      <li class="message"><a href="/questions" target="_self" title="留言板">留言板</a></li>
+                  </ul>
+            </div>  
+   </div>
+   <div class="contentArea">
+   		<div class="farmer"><img src="images/farmer.png" width="200" height="370" /></div>
+   		<div class="newsBox">
+        	<h1>最新消息：</h1>
+            <div class="newsPoint"></div>
+            <div class="newsList">
+                <ul>
+                  <% @news.each do |news| %>
+                  <% if(!news.newcreate) %>
+                  <li><%= news.created_at.strftime("%Y/%m/%d") %>： <%= link_to news.name, news %></li>
+                  <% end %>
+                  <% end %>
+                </ul>
+                <div class="newsPage">
+                  <%= paginate @news %>
+                </div>
+        	</div> 
+        </div>
+   

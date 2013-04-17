@@ -1,0 +1,34 @@
+﻿@import url(http://fonts.googleapis.com/css?family=Oxygen);
+
+body{font:300 15px "微軟正黑體";line-height:1.7em}
+a{text-decoration:none;font:300 15px "微軟正黑體";
+-webkit-transition:all .3s ease;
+-moz-transition:all .3s ease}
+
+section{width:1024px;margin:0 auto}
+section:after{clear:both}
+
+header{background:#004098;border-top:4px solid #1588EB;height:85px;box-shadow:0 0 5px #eee;border-bottom:1px solid #E1E1E1}
+h1{text-indent:-9999px;float:left;width:50%;position:relative;top:-4px}
+h1 a{display:block;width:167px;height:76px;background:image-url("h1.jpg")}
+header nav{float:right;width:50%}
+header nav a{display:block;height:80px;float:right;padding:40px 15px 0 15px;color:#fff;text-shadow:0 -1px 0 #012B64}
+header nav a:hover{color:#91ffd4}
+header nav .active{background:#012B64;color:#91ffd4;text-shadow:0 -1px 0 #001634}
+
+article section{padding:50px 0}
+article hgroup{background:image-url("hgroup.jpg") 0 bottom no-repeat;height:90px}
+article hgroup p{color:#515151}
+article h2{color:#8e8e8e;font:300 55px "微軟正黑體"}
+
+aside{background:#001B56}
+aside section{padding:60px 0 0 130px;height:325px;background:image-url("aside-bg.jpg") 690px center no-repeat}
+aside h6{color:#4f86ff;font:300 27px "微軟正黑體";height:35px}
+aside nav{color:#fff;height:115px}
+aside a{color:#fff;font-size:14px}
+aside a:hover{color:#4f86ff}
+aside #info{color:#fff;font-size:13px;line-height:1.7em;padding:45px 0 0 0;background:image-url("aside-01.jpg") 0 0 no-repeat}
+
+footer{background:#04163E;color:#4b72ad;font-size:12px}
+footer section{padding:10px 0 0 130px;height:40px;}
+footer a{color:#4b72ad;font-size:12px}

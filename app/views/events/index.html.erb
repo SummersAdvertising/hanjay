@@ -1,0 +1,32 @@
+<%= stylesheet_link_tag "activity" %>
+<section>
+    <hgroup>
+      <h2>漢杰活動</h2>
+    </hgroup>
+    
+    
+    <div id="content">
+    
+    <% @events.each do | event | %>
+    	<div class="news" id="<%= "event_#{event.id}" %>">
+	        <div class="title">
+	          <div class="date"> <%= event.date.year %><br>
+	            <span class="md"><%= "#{event.date.month}/#{event.date.day}"  %></span> </div>
+	          <h3><%= event.title %></h3>
+	          <img src="<%= image_path("upd-02.png") %>"> </div>
+	        <div class="text">
+	          <table width="100%" border="0" cellspacing="0" cellpadding="0">
+	            <tr>
+	              <td width="74%"><p>時間：<%= event.period %><br>
+	                  地點：<%= event.location %> <br>
+	                  內容：<%= event.description %></p></td>
+	              <td width="26%" valign="bottom"><a href="<%= event.link %>"></a></td>
+	            </tr>
+	          </table>
+	        </div>
+	      </div>
+    <% end %>
+             
+    </div>
+    <!--content--> 
+  </section>

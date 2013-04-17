@@ -1,0 +1,58 @@
+<%= form_for([:admin, @flaw]) do | f | %>
+<section class="text text-edit">
+	
+  <div class="quarter">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <th valign="top"><%= f.label :date, "發佈日期：" %></th>
+        <td><%= f.date_select :date %></td>
+      </tr>
+    </table>
+  </div>
+  <div class="remainder">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <th valign="top"><%= f.label :issue, "文章標題：" %></th>
+        <td><%= f.text_field :issue %></td>
+      </tr>
+    </table>
+  </div>
+  <div class="one">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <th><%= f.label :status, "前台顯示？" %></th>
+        <td><%= f.check_box :status, {:id => "checkbox"}, [:enable] %>
+          ( 若無勾選則不發佈 )</td>
+      </tr>
+    </table>
+  </div>
+</section>
+<!--text-->
+<section class="button"> <a href="javascript:$('form#new_flaw').submit();"><img src="<%= image_path("add.png") %>">新增</a> </section>
+  <% end %>
+<!--button-->
+<section class="hgroup">
+  <h2>弱點通報列表</h2>
+  <p>( 可點擊圖示更換發佈狀態 )</p>
+</section>
+<!--hgroup-->
+<section class="list">
+  <table width="100%" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+      <th align="left" class="x0 x1">發佈</th>
+      <th align="left" class="x0 x2">日期</th>
+      <th align="left">標題</th>
+      <th align="left" class="x1">刪除</th>
+    </tr>
+    
+<% @flaws.each do |flaw| %>
+    <tr>
+      <td class="x0"><%= link_to image_tag( (flaw.status == 'enable' ? "check.png" : "cancel.png"), { :id => "flaw_#{flaw.id}_status" } ), admin_flaw_path( flaw, "flaw[status]" => (flaw.status == 'enable' ? "disable" : "enable")  ), :method => :put , :remote => true %></td>
+      <td class="x0"><%= flaw.date.to_s( :date ) %></td>
+      <td><a href="#"><%= flaw.issue %></a></td>
+      <td class="delete"><%= link_to image_tag("delete.png"), admin_flaw_path(flaw), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+<% end %>
+  </table>
+</section>
+<!--list--> 

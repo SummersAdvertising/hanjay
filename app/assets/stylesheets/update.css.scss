@@ -1,0 +1,17 @@
+article section{background:image-url("upd-01.jpg") right 30px no-repeat}
+
+#content{width:785px;padding:50px 0}
+.title{position:relative;height:95px;overflow:hidden;cursor:pointer;border-top:1px dashed #D3D3D3;padding:25px 0 0 0;margin:0 0 25px 0}
+.title .date{background:#00CDD4;float:left;height:70px;width:80px;color:#fff;padding:10px 0 0 10px}
+.title .md{font-size:20px}
+.title h3{height:70px;float:right;width:700px;padding:27px 0 0 20px;color:#424242;font:300 17px "微軟正黑體";}
+.active h3{background:#CDE9EA;color:#14A1A6;font-weight:900}
+.title img{position:absolute;top:50px;left:71px}
+
+.news:nth-child(1) .title{padding:0;border:none;height:70px}
+.news:nth-child(1) img{top:25px}
+.news:nth-child(2n-1) .date{background:#3194EA}
+.news:nth-child(2n-1) .active h3{background:#BBDFFF;color:#004098}
+
+.text{margin:0 40px 25px 40px;padding:0 0 0 65px;border-left:1px solid #D7D7D7}
+.text p{padding:10px 0}

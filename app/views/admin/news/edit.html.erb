@@ -1,0 +1,106 @@
+<%= javascript_include_tag 'peditor' %>
+
+<%= form_for([:admin, @news]) do |f| %>
+
+<section class="title">
+    
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <th><%= f.label :date, '消息日期' %></th>
+          <td><%= f.date_select :date, :placeholder => "請選擇日期" %></td>
+        </tr>
+      </table>
+    </section>
+    <!--title-->
+    <section class="title">
+      <table width="100%" border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <th><%= f.label :name, '文章標題' %></th>
+          <td><%= f.text_field :name, :placeholder => "請輸入文章標題" %></td>
+        </tr>
+      </table>
+    </section>
+    <!--title-->
+    <section class="tab" id="editorPanel">
+      <!--ul class="x2">
+        <li id="p-tab"><a href="#post-p"><img src="<%= image_path("edit.png") %>">插入段落</a></li>
+        <li id="list-tab"><a href="#post-list"><img src="<%= image_path("list.png") %>"/>插入清單</a></li>
+      </ul-->
+    </section>
+    <!--tab-->
+    <!--section class="post">
+      <div id="post-p">
+        <textarea name="textarea" cols="" rows="" class="autogrow"></textarea>
+      </div>
+      <div id="post-list">
+        <ul>
+          <li>
+            <input name="" type="text"/>
+          </li>
+          <li>
+            <input name="" type="text"/>
+          </li>
+          <li>
+            <input name="" type="text"/>
+          </li>
+        </ul>
+        <div class="addlist"><a href="#">增加</a> </div>
+      </div>
+    </section-->
+    <!--post-->
+    <section id="addNewParagraph" class="button"> <a href="javascript:void(0);"><img src="<%= image_path("add.png") %>">新增</a> </section>
+    <!--button-->
+    <section class="hgroup">
+      <h2>文章預覽</h2>
+    </section>
+    <!--hgroup-->
+<!--show the content of article -->
+<%= f.label :content %><%= f.text_field :content, :style => "width: 80%; " %><!--display:none;-->
+
+    <section class="preview" id="articleContent">
+      <!--div class="part">
+        <div class="tool-b"> <a href="#">編輯</a> <a href="#">刪除</a> </div>
+        <p>寫了一些段落</p>
+      </div>
+      <div class="part">
+        <div class="tool-b"> <a href="#">編輯</a> <a href="#">刪除</a> </div>
+        <p>不知所云的第二段</p>
+      </div>
+      <div class="part">
+        <div class="editbox">
+          <textarea name="textarea" cols="" rows="" class="autogrow"></textarea>
+          <div class="tool-a"> <a href="#">儲存</a> <a href="#">取消</a> </div>
+        </div>
+      </div-->
+    </section>
+    <!--preview-->
+    <section class="text text-edit">
+      <div class="one">
+        <table width="100%" border="0" cellspacing="0" cellpadding="0">
+          <tr>
+            <th>
+		    	<%= f.label :status, "顯示？" %>
+		    </th>
+            <td><%= f.check_box :status, {}, [:enable] %>
+              ( 若無勾選則不發佈 )</td>
+          </tr>
+        </table>
+      </div>
+    </section>
+    <!--text-->
+    <section class="button"><%= link_to image_tag("check.png") + "完成", 'javascript: void(0);', :onclick => "$(this).parents('form').submit();" %> </section>
+    <!--button--> 
+<% end %>
+
+<hr />
+
+
+<script type="text/javascript">
+$(document).ready(function(){
+  editor.setEditor({
+	  "articleModel": "news"
+  });
+  editor.init();
+});
+</script>
+

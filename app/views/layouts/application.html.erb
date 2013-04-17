@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hanjay</title>
+<%= stylesheet_link_tag "reset", :media => :all %>
+<%= stylesheet_link_tag "application" %>
+<%= stylesheet_link_tag "style", :media => :all %>
+
+<%= javascript_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<header _height="none">
+  <section>
+    <h1><a href="<%= root_url %>">HANJAY</a></h1>
+    
+    <nav> <a href="<%= news_index_path %>">最新消息</a> <a href="<%= flaws_path %>">安全弱點通報</a> <a href="<%= page_path( :id => "support" ) %>">支援與服務</a> <a href="<%= root_url %>">漢杰服務</a> </nav>
+    
+  </section>
+</header>
+
+
+<article>
+  <%= yield %>
+</article>
+
+<%= render :partial => "layouts/footer" %>
+
+</body>
+</html>
