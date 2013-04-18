@@ -8,6 +8,7 @@
   <h2>最新消息</h2>
 </hgroup>
 <div id="content">
+<% if !@f_news.nil? %>
   <div class="news">
     <div class="title">
       <div class="date"> <%= @f_news.date.year %><br>
@@ -16,6 +17,7 @@
       <img src="<%= image_path("upd-02.png") %>"> </div>
     <div id="initNews" class="text"></div>
   </div>
+<%end%>
 </div>
 <!--content--> 
 </section>
