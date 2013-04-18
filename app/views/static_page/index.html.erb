@@ -5,7 +5,18 @@
 <script src="js/html5.js"></script>
 <![endif]-->
 <meta charset="utf-8">
-<title>無標題文件</title>
+<meta name="Robots" content="index,follow"/>
+<meta http-equiv="content-language" content="zh-TW" />
+<meta name="keywords" content="資訊安全, 網路安全, 個資, 個人資料, 雲端 "/>
+<meta name="description" content="雲端時代來臨，個資法頒布，企業的資訊安全計劃準備好了嗎？機密文件傳輸，珍貴的客戶個人資料，都可能是有心人士的主要目標，漢杰科技提供資訊安全顧問四大服務，與強力的資訊安全夥伴，一起為企業打造最放心的網路安全方案。"/>
+<link rel="SHORTCUT ICON" href="/images/favicon.ico"/>
+<link rel="image_src" href="/images/thumb.jpg"/>
+<meta property="og:title" content="漢杰科技-網路安全風險診斷專家"/>
+<meta property="og:description" content="雲端時代來臨，個資法頒布，企業的資訊安全計劃準備好了嗎？機密文件傳輸，珍貴的客戶個人資料，都可能是有心人士的主要目標，漢杰科技提供資訊安全顧問四大服務，與強力的資訊安全夥伴，一起為企業打造最安心的網路安全方案。"/>
+<meta property="og:site_name" content="漢杰科技-網路安全風險診斷專家"/>
+<meta property="og:image" content="www.hanjay.com/images/thumb.jpg"/>
+<meta property="og:type" content="company"/>
+<title>漢杰科技-網路安全風險診斷專家</title>
 <%= stylesheet_link_tag "reset", :media => :all %>
 <%= stylesheet_link_tag "application" %>
 <%= stylesheet_link_tag "index", :media => :all %>
@@ -23,7 +34,7 @@ $(document).ready(function(){
 <header _height="none">
   <section>
     <h1><a href="<%= root_url %>">HANJAY</a></h1>
-    <nav> <a href="<%= root_url + "#about" %>">關於漢杰</a> <a href="<%= news_index_path %>">最新消息</a> <a href="<%= page_path( :id => "support" ) %>">支援與服務</a> <a href="<%= root_url + "#partner" %>">夥伴與方案</a> <a href="<%= root_url + "#intro" %>">漢杰服務</a></nav>
+    <nav> <a href="<%= root_url + "#about-link" %>">關於漢杰</a> <a href="<%= news_index_path %>">最新消息</a> <a href="<%= page_path( :id => "support" ) %>">支援與服務</a> <a href="<%= root_url + "#partner-link" %>">夥伴與方案</a> <a href="<%= root_url + "#service-link" %>">漢杰服務</a></nav>
   </section>
 </header>
 
@@ -34,7 +45,7 @@ $(document).ready(function(){
       漢杰科技團隊擁有跨國資訊安全服務經驗與獨立安全軟體開發鑑識能力<br>
       提供內網《資料外洩、殭屍電腦、間諜程式、APT 攻擊》查核與電腦鑑<br>
       識服務</p>
-    <div id="btn"><a href="#"></a> </div>
+    <div id="btn"><a href="<%= page_path( :id => "support" ) %>"></a> </div>
     <div id="actlink"><%= link_to "近期活動：#{@event.title}⋯more", @event  if !@event.nil? %></div>
   </section>
 </article>
@@ -47,11 +58,11 @@ $(document).ready(function(){
     <h3>資料外洩查核服務</h3>
     <p>漢杰科技提供機敏資料外洩查核與防護方案，透過資料庫安全存取稽核、Web 應用層穿透威脅分析，安全弱點控制，可積極協助與管制各樣潛藏的資料外洩風險 ... <a href="#">more</a></p>
     <ul>
-      <li><a href="#" class="iframe">資料庫安全稽核</a></li>
-      <li><a href="#" class="iframe">Web 應用層穿透威脅分析</a></li>
-      <li><a href="#" class="iframe">資料庫高風險弱點查核控制</a></li>
-      <li><a href="#" class="iframe">機敏(個)資料盤點、風險評鑑與加密防護</a></li>
-      <li><a href="#" class="iframe">機敏資料使用、管理、銷毀驗證分析</a></li>
+      <li><a class="iframe">資料庫安全稽核</a></li>
+      <li><a class="iframe">Web 應用層穿透威脅分析</a></li>
+      <li><a class="iframe">資料庫高風險弱點查核控制</a></li>
+      <li><a class="iframe">機敏(個)資料盤點、風險評鑑與加密防護</a></li>
+      <li><a class="iframe">機敏資料使用、管理、銷毀驗證分析</a></li>
     </ul>
   </section>
 </article>
@@ -60,10 +71,10 @@ $(document).ready(function(){
     <h3>內網惡意流量分析服務</h3>
     <p>漢杰科技協助客戶進行網路應用層惡意流量鑑識分析，此分析可清楚診斷內網不當流量來源與活動分佈，掃除殭屍電腦植入與 APT 攻擊威脅，並積極提供內網 QoS 管理，可滿足網路營運不中斷，不延遲的目標 ... <a href="#">more</a></p>
     <ul>
-      <li><a href="#" class="iframe">分析目標網路，高風險惡意流量來源與影響分佈</a></li>
-      <li><a href="#" class="iframe">警示網路中存在的殭屍電腦 (Botnet) 與不明 Tunnel 活動</a></li>
-      <li><a href="#" class="iframe">分析目標網路 Top 10 的各項高流量應用行為</a></li>
-      <li><a href="#" class="iframe">提出目標網路可修正之風險控管措施</a></li>
+      <li><a class="iframe">分析目標網路，高風險惡意流量來源與影響分佈</a></li>
+      <li><a class="iframe">警示網路中存在的殭屍電腦 (Botnet) 與不明 Tunnel 活動</a></li>
+      <li><a class="iframe">分析目標網路 Top 10 的各項高流量應用行為</a></li>
+      <li><a class="iframe">提出目標網路可修正之風險控管措施</a></li>
     </ul>
   </section>
 </article>
@@ -75,10 +86,10 @@ $(document).ready(function(){
     <h3>安全弱點掃描服務</h3>
     <p>漢杰科技提供安全弱點掃描服務，可自雲端與近端2種方式進行，並特別針對高風險弱點做覆查與修補建議，風險差異性分析報告亦可滿足客戶 ISO27001 / 20000 之驗證要求。 ... <a href="#">more</a></p>
     <ul>
-      <li><a href="#" class="iframe">提供 IPv4/IPv6 雙協定弱點分析報告</a></li>
-      <li><a href="#" class="iframe">雲端掃描或隔離環境之近端掃描</a></li>
-      <li><a href="#" class="iframe">差異性弱點報表與修補追蹤</a></li>
-      <li><a href="#" class="iframe">高風險弱點複驗</a></li>
+      <li><a class="iframe">提供 IPv4/IPv6 雙協定弱點分析報告</a></li>
+      <li><a class="iframe">雲端掃描或隔離環境之近端掃描</a></li>
+      <li><a class="iframe">差異性弱點報表與修補追蹤</a></li>
+      <li><a class="iframe">高風險弱點複驗</a></li>
     </ul>
   </section>
 </article>
@@ -87,10 +98,10 @@ $(document).ready(function(){
     <h3>電腦鑑識與數位證據服務</h3>
     <p>提供資訊資產管理與電腦鑑識服務，針對機密敏感性資料的不當使用提供預防、偵測、回應3項策略性建議與實務稽查分析，可滿足客戶數位證據的法院舉證效力。 ... <a href="#">more</a></p>
     <ul>
-      <li><a href="#" class="iframe">數位資料封存、刪除重建與無汙染證據保全</a></li>
-      <li><a href="#" class="iframe">特徵資料存取軌跡與鑑識</a></li>
-      <li><a href="#" class="iframe">系統拋轉比對分析(供應商與客戶)</a></li>
-      <li><a href="#" class="iframe">高風險目標鑑識預防、合理性偵測與防護線建立</a></li>
+      <li><a class="iframe">數位資料封存、刪除重建與無汙染證據保全</a></li>
+      <li><a class="iframe">特徵資料存取軌跡與鑑識</a></li>
+      <li><a class="iframe">系統拋轉比對分析(供應商與客戶)</a></li>
+      <li><a class="iframe">高風險目標鑑識預防、合理性偵測與防護線建立</a></li>
     </ul>
   </section>
 </article>
@@ -100,19 +111,19 @@ $(document).ready(function(){
     <h3>夥伴與方案</h3>
     <p>漢杰科技與多家業界知名技術公司合作，提供最適宜的工具與產品解決方案</p>
     <ul>
-      <li>amXecure</li>
-      <li>Encase</li>
-      <li>BlueCoat</li>
-      <li>FormasaAuditor</li>
-      <li>broadweb</li>
-      <li>KPMG</li>
-      <li>chalettech</li>
-      <li>PaloAlto</li>
-      <li>Citrix</li>
-      <li>trustview</li>
-      <li>cobrasoinc</li>
-      <li>websencs</li>
-      <li>CPS Systems</li>
+      <li><a href="http://www.amxecure.com" target="_blank">amXecure</a></li>
+      <li><a href="http://www.guidancesoftware.com" target="_blank">Encase</a></li>
+      <li><a href="http://www.bluecoat.com" target="_blank">BlueCoat</a></li>
+      <li><a href="http://www.formasaauditor.com/index-tw.php" target="_blank">FormasaAuditor</a></li>
+      <li><a href="http://www.broadweb.com.tw" target="_blank">broadweb</a></li>
+      <li><a href="http://www.kpmg.com/tw/zh/Pages/Default.aspx" target="_blank">KPMG</a></li>
+      <li><a href="http://www.chalettech.com" target="_blank">chalettech</a></li>
+      <li><a href="http://www.paloaltonetworks.com" target="_blank">PaloAlto</a></li>
+      <li><a href="http://www.citrix.com.tw/" target="_blank">Citrix</a></li>
+      <li><a href="http://www.trustview.com.tw" target="_blank">trustview</a></li>
+      <li><a href="http://www.cobrasonic.com" target="_blank">cobrasoinc</a></li>
+      <li><a href="http://www.websense.com" target="_blank">websencs</a></li>
+      <li><a href="http://www.cps-sys.com.tw/page_company_tw.htm" target="_blank">CPS Systems</a></li>
     </ul>
   </section>
 </article>
@@ -167,6 +178,7 @@ $(document).ready(function(){
   </section>
 </article>
 <article id="about">
+<a id="about-link" style="position:relative;top:-85px"></a>
   <section>
     <div id="found">
       <h4>關於漢杰科技</h4>
