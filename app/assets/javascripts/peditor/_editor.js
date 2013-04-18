@@ -13,7 +13,7 @@ var editor = {
 		paragraphFontSize: { "大小": "default", 14:14, 28:28 }
 	},
 	init: function(settings){
-		editor.settings = settings? editor.setEditor(editor.settings, settings) : editor.settings;
+		editor.settings = settings? editor.setEditor(settings) : editor.settings;
 
 		$("#articleContent").addClass("sortable");
 		$( ".sortable" ).sortable({
