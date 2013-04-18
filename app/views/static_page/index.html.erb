@@ -21,7 +21,7 @@
 <%= stylesheet_link_tag "application" %>
 <%= stylesheet_link_tag "index", :media => :all %>
 
-<%= javascript_tag "application" %>
+<%= javascript_include_tag "application" %>
 <script>
 $(document).ready(function(){
 	$(".iframe").colorbox({iframe:true, width:"80%", height:"80%"});

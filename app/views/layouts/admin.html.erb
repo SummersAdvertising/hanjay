@@ -72,12 +72,12 @@
 <header _height="none">
   <section id="top"> <a id="nav-ctrl"><img src="<%= image_path("nav.png") %>"></a>
     <div class="left">
-      <h1><a href="#">漢杰後台管理系統</a></h1>
+      <h1><a href="<%= admin_path %>">漢杰後台管理系統</a></h1>
     </div>
 
     <!--left-->
     <aside> <a id="aside-ctrl"><img src="<%= image_path("set.png") %>"></a>
-      <div id="aside-box"><a href="/admin/edit">修改個人資料</a> <a href="/admin/log_out">登出</a> <a href="#">返回首頁</a> </div>
+      <div id="aside-box"><a href="/admin/edit">修改個人資料</a> <a href="/admin/log_out">登出</a> <a href="<%= root_url %>">返回首頁</a> </div>
     </aside>
   </section>
   <!--top--> 
