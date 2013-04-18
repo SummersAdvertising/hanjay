@@ -8,9 +8,9 @@ var editor = {
 		photoDestroy: "deletePhoto",
 		linkedp: true,
 		linkedimg: true,
-		paragraphFontClass: { "內文": "content", "標題": "title" }, 
-		paragraphFontColor: { "顏色": "default", "黑色": "#000", "藍色": "#00F" }, 
-		paragraphFontSize: { "大小": "default", 14:14, 28:28 }
+		paragraphFontClass: { "內文": "content", "標題": "part-title" }, 
+		//paragraphFontColor: { "顏色": "default", "黑色": "#000", "藍色": "#00F" }, 
+		//paragraphFontSize: { "大小": "default", 14:14, 28:28 }
 	},
 	init: function(settings){
 		editor.settings = settings? editor.setEditor(settings) : editor.settings;
