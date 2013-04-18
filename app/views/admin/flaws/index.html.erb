@@ -5,7 +5,7 @@
     <table width="100%" border="0" cellspacing="0" cellpadding="0">
       <tr>
         <th valign="top"><%= f.label :date, "發佈日期：" %></th>
-        <td><%= f.date_select :date %></td>
+        <td><%= f.text_field :date, :placeholder => "請選擇活動日期", :class => "datePicker", :value => Time.now.to_s( :date )  %></td>
       </tr>
     </table>
   </div>
@@ -21,7 +21,7 @@
     <table width="100%" border="0" cellspacing="0" cellpadding="0">
       <tr>
         <th><%= f.label :status, "前台顯示？" %></th>
-        <td><%= f.check_box :status, {:id => "checkbox"}, [:enable] %>
+        <td><%= f.check_box :status, { :checked => ("checked" if @flaw.status == "enable") }, "enable" %>
           ( 若無勾選則不發佈 )</td>
       </tr>
     </table>

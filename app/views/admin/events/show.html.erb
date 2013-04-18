@@ -50,11 +50,3 @@
 <section class="button"> <%= link_to image_tag("edit.png") + "編輯", edit_admin_event_path(@event) %><%= link_to image_tag("back.png") + "返回", admin_events_path %></section>
 <!--button--> 
 </article>
-<% if flash[ :notice ] %>
-<script>
-	$(function() {
-		Alertify.log.success("<%= flash[ :notice ] %>");
-	})	
-</script>
-<% end %>
-  

@@ -13,7 +13,7 @@ var textContainer = $('<div class="text">');
 
 editor.output(newsContent, textContainer);
 
-newsContainer.append(titleContainer).append(textContainer).appendTo("#content").hide().fadeIn('slow')slideUp('slow');
+newsContainer.append(titleContainer).append(textContainer).appendTo("#content").hide().fadeIn('slow').slideDown('slow');
 
 titleContainer.click(function(){
 	$(this).addClass('active').parents('.news').siblings().children().removeClass('active');

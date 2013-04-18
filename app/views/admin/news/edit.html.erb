@@ -7,7 +7,7 @@
       <table width="100%" border="0" cellspacing="0" cellpadding="0">
         <tr>
           <th><%= f.label :date, '消息日期' %></th>
-          <td><%= f.date_select :date, :placeholder => "請選擇日期" %></td>
+          <td><%= f.text_field :date, :placeholder => "請選擇活動日期", :class => "datePicker", :value => @news.date.to_s( :date ) %></td>
         </tr>
       </table>
     </section>

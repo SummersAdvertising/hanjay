@@ -20,6 +20,7 @@
 <%= stylesheet_link_tag "alertify" %>
 
 <%= stylesheet_link_tag "admin/custom" %>
+<%= stylesheet_link_tag "admin/jquery-ui" %>
 
 <%= javascript_include_tag "admin" %>
 
@@ -54,6 +55,10 @@
   Alertify.log.success("<%= notice %>");
   
   <% end %>
+  
+  $('.datePicker').datepicker({
+	  dateFormat: "yy-mm-dd"
+  });
   /*
 	  $.rails.confirm = function(message) { 
 	  	return alertifyConfirm(message); 
