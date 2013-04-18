@@ -3,6 +3,7 @@ class AdminController < ApplicationController
   def showAdmins
     @admins = Admin.all
   	@admin = Admin.new
+  	
   end
   
   def deleteAdmin 
@@ -27,6 +28,7 @@ class AdminController < ApplicationController
 
     @admin.name = params[:admin]["name"]
     @admin.username = params[:admin]["username"]
+    
 
     if (params[:admin]["password"]!="")
       @admin.password = Digest::SHA1.hexdigest(params[:admin]["password"])

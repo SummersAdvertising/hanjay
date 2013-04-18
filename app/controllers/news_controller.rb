@@ -1,7 +1,7 @@
 class NewsController < ApplicationController
 
   def index
-    @news = News.order('created_at DESC').page(params[:page])
+    @news = News.where( "status = 'enable'" ).order('date DESC')
     
     @f_news = @news.first
     
