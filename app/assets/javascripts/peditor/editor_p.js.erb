@@ -91,7 +91,12 @@ editor.paragraph = {
 		
 		this.bindControl(paragraphBox);
 	},
-	output: function(paragraph){
+	output: function(paragraph, target){
+	
+		if ( target == undefined ) {
+			target = $("#articleContent");
+		}
+	
 		var paragraphBox = $("<div class=\"part\">");
 		paragraphBox.attr("data-type", "paragraph");
 
@@ -119,7 +124,7 @@ editor.paragraph = {
 
 		paragraphBox.append(p);
 		
-		$("#articleContent").append(paragraphBox);
+		target.append(paragraphBox);
 
 		return paragraphBox;
 	},

@@ -1,4 +1,8 @@
+
 <%= stylesheet_link_tag "update" %>
+
+<%= javascript_include_tag "peditor" %>
+
 <section>
 <hgroup>
   <h2>最新消息</h2>
@@ -6,58 +10,47 @@
 <div id="content">
   <div class="news">
     <div class="title">
-      <div class="date"> 2012<br>
-        <span class="md">12.18</span> </div>
-      <h3>美麗島雲端安全科技發表網站應用程式防火牆產品</h3>
+      <div class="date"> <%= @f_news.date.year %><br>
+        <span class="md"><%= "#{@f_news.date.month}.#{@f_news.date.day}" %></span> </div>
+      <h3><%= @f_news.name %></h3>
       <img src="<%= image_path("upd-02.png") %>"> </div>
-    <div class="text">
-      <p>由於個資法的施行，國內中小企業為了防止網站上的機敏資料以及個人資料外洩，對於網站防火牆的需求隨之增加，但面對經濟不景氣以及市面上的網站防火牆價格動輒百萬起跳，國內中小企業即使有心加強網站的防護也難以負擔。 </p>
-      <p>有鑑於此，資安公司美麗島雲端安全科技發表一款平價的網站應用程式防火牆 ( WAF，Web Application Firewall )，並且在設定介面特別採取 KISS ( Keep It Simple，Stupid ) 設計原則，使得 WAF 的設定變得簡單而且易於操作，讓網站安全防護不論是在價格或使用上都變得平易近人。 </p>
-      <p>美麗島雲端安全科技發表的 K.I.S.S WAF 採取雙向的網站防護策略，與單向防護的最大差異在於單向防護只有阻擋來自於外部 (Inbound) 的入站攻擊，對於從內部送出站 ( Outbound ) 的機敏資料與個人資料沒有進行過濾的動作，因此單向防護的 WAF 雖然可以抵擋來自外部的駭客攻擊，卻無法防止機敏資料以及個人資料外洩。單向防護在出站資料把關方面原本就存在先天不足的地方，因此 K.I.S.S 網站防火牆採用雙向防護，能夠有效的防止機敏資料以及個人資料外洩。 </p>
-      <p>網站的攻擊除了會造成系統被入侵，置換網頁，竊取資料以外，還有分散式阻斷服務攻擊 ( DDoS，Distributed Denial Of Service ) 也是常見的駭客手法，因此 K.I.S.S WAF 也支援 DDoS 防護選項，可以偵測分散式阻斷服務攻擊，阻斷攻擊來源。 </p>
-      <p>K.I.S.S WAF 支援監控日誌資料庫，可即時查詢與檢視攻擊來源與內容，並且提供可篩選日期時間、來源 IP、連線狀態等等的連線紀錄，還有包括正常連線與阻擋連線比例的統計圖表，提供用戶立即分析攻擊來源以及攻擊內容。 </p>
-      <p>美麗島雲端安全科技<br>
-        FormasaAuditor Cloud Vulnerability Technology.</p>
-    </div>
-  </div>
-  <div class="news">
-    <div class="title">
-      <div class="date"> 2012<br>
-        <span class="md">12.18</span> </div>
-      <h3>美麗島雲端安全科技發表網站應用程式防火牆產品</h3>
-      <img src="<%= image_path("upd-02.png") %>"> </div>
-    <div class="text">
-      <p>由於個資法的施行，國內中小企業為了防止網站上的機敏資料以及個人資料外洩，對於網站防火牆的需求隨之增加，但面對經濟不景氣以及市面上的網站防火牆價格動輒百萬起跳，國內中小企業即使有心加強網站的防護也難以負擔。 </p>
-      <p>有鑑於此，資安公司美麗島雲端安全科技發表一款平價的網站應用程式防火牆 ( WAF，Web Application Firewall )，並且在設定介面特別採取 KISS ( Keep It Simple，Stupid ) 設計原則，使得 WAF 的設定變得簡單而且易於操作，讓網站安全防護不論是在價格或使用上都變得平易近人。 </p>
-      <p>美麗島雲端安全科技發表的 K.I.S.S WAF 採取雙向的網站防護策略，與單向防護的最大差異在於單向防護只有阻擋來自於外部 (Inbound) 的入站攻擊，對於從內部送出站 ( Outbound ) 的機敏資料與個人資料沒有進行過濾的動作，因此單向防護的 WAF 雖然可以抵擋來自外部的駭客攻擊，卻無法防止機敏資料以及個人資料外洩。單向防護在出站資料把關方面原本就存在先天不足的地方，因此 K.I.S.S 網站防火牆採用雙向防護，能夠有效的防止機敏資料以及個人資料外洩。 </p>
-      <p>網站的攻擊除了會造成系統被入侵，置換網頁，竊取資料以外，還有分散式阻斷服務攻擊 ( DDoS，Distributed Denial Of Service ) 也是常見的駭客手法，因此 K.I.S.S WAF 也支援 DDoS 防護選項，可以偵測分散式阻斷服務攻擊，阻斷攻擊來源。 </p>
-      <p>K.I.S.S WAF 支援監控日誌資料庫，可即時查詢與檢視攻擊來源與內容，並且提供可篩選日期時間、來源 IP、連線狀態等等的連線紀錄，還有包括正常連線與阻擋連線比例的統計圖表，提供用戶立即分析攻擊來源以及攻擊內容。 </p>
-      <p>美麗島雲端安全科技<br>
-        FormasaAuditor Cloud Vulnerability Technology.</p>
-    </div>
-  </div>
-  <div class="news">
-  <div class="title">
-    <div class="date"> 2012<br>
-      <span class="md">12.18</span> </div>
-    <h3>美麗島雲端安全科技發表網站應用程式防火牆產品</h3>
-    <img src="<%= image_path("upd-02.png") %>"> </div>
-  <div class="text">
-    <p>由於個資法的施行，國內中小企業為了防止網站上的機敏資料以及個人資料外洩，對於網站防火牆的需求隨之增加，但面對經濟不景氣以及市面上的網站防火牆價格動輒百萬起跳，國內中小企業即使有心加強網站的防護也難以負擔。 </p>
-    <p>有鑑於此，資安公司美麗島雲端安全科技發表一款平價的網站應用程式防火牆 ( WAF，Web Application Firewall )，並且在設定介面特別採取 KISS ( Keep It Simple，Stupid ) 設計原則，使得 WAF 的設定變得簡單而且易於操作，讓網站安全防護不論是在價格或使用上都變得平易近人。 </p>
-    <p>美麗島雲端安全科技發表的 K.I.S.S WAF 採取雙向的網站防護策略，與單向防護的最大差異在於單向防護只有阻擋來自於外部 (Inbound) 的入站攻擊，對於從內部送出站 ( Outbound ) 的機敏資料與個人資料沒有進行過濾的動作，因此單向防護的 WAF 雖然可以抵擋來自外部的駭客攻擊，卻無法防止機敏資料以及個人資料外洩。單向防護在出站資料把關方面原本就存在先天不足的地方，因此 K.I.S.S 網站防火牆採用雙向防護，能夠有效的防止機敏資料以及個人資料外洩。 </p>
-    <p>網站的攻擊除了會造成系統被入侵，置換網頁，竊取資料以外，還有分散式阻斷服務攻擊 ( DDoS，Distributed Denial Of Service ) 也是常見的駭客手法，因此 K.I.S.S WAF 也支援 DDoS 防護選項，可以偵測分散式阻斷服務攻擊，阻斷攻擊來源。 </p>
-    <p>K.I.S.S WAF 支援監控日誌資料庫，可即時查詢與檢視攻擊來源與內容，並且提供可篩選日期時間、來源 IP、連線狀態等等的連線紀錄，還有包括正常連線與阻擋連線比例的統計圖表，提供用戶立即分析攻擊來源以及攻擊內容。 </p>
-    <p>美麗島雲端安全科技<br>
-      FormasaAuditor Cloud Vulnerability Technology.</p>
-  </div>
+    <div id="initNews" class="text"></div>
   </div>
 </div>
 <!--content--> 
 </section>
 
 <script type="text/javascript">
-	$(function(){
+	$(function(){	
+		editor.output('<%= @f_news.content.html_safe %>', $('#initNews'));
+		
+		var news_ids = [];
+		
+		<% @news.each do | news |  %>
+			news_ids.push(<%= news.id %>);
+		<% end %>
+		
+		setTimeout( function() { grapNewsContent( 1 ) }, 1000);
+		
+		function grapNewsContent( index ) {
+			console.log(index);
+			if (index >= news_ids.length) {
+				return;
+			} else if ( index == undefined ) {
+				index = 1;
+			}
+			
+			$.ajax({
+				url: '/news/' + news_ids[index],
+				dataType: "script",
+				complete: function( data ) {
+					setTimeout( function() { grapNewsContent( index+1 ) }, 1000);
+				}
+			});
+		}
+		
+		console.log(news_ids);
+	
 		$('.title').click(function(){
 			$(this).addClass('active').parents('.news').siblings().children().removeClass('active');
 			var $side_text = $(this).next('.text');
@@ -67,8 +60,9 @@
 			$side_text.slideToggle();
 		}).siblings().hide();
 		
-	$('.title').eq(0).addClass('active').next('.text').show()
+		$('.title').eq(0).addClass('active').next('.text').show()
 	});
+	
 	
 	
 </script>

@@ -97,21 +97,27 @@ var editor = {
 			}
 		}
 	},
-	output:function(){
-		//read-only
-		var contentEle = $("#"+editor.settings.articleModel+"_content");
-		
-		if(contentEle && contentEle.val()){
-			var article = JSON.parse(contentEle.val());
-			for(var i = 0, length = article.length; i < length; i++)
-			{
-				var paragraph = article[i];				
-				if ($.inArray(paragraph.type, editor.elements) == -1) {
-					continue;
-				}
-				editor[paragraph.type].output(paragraph);
+	output:function( contentEle, target  ){
+		if ( contentEle == undefined  ) {			
+			//read-only
+			var contentEle = $("#"+editor.settings.articleModel+"_content");
+			if(contentEle && contentEle.val()){
+				var content = contentEle.val();
 			}
+		} else {
+			var content = contentEle;
 		}
+		
+		var article = JSON.parse(content);
+		for(var i = 0, length = article.length; i < length; i++)
+		{
+			var paragraph = article[i];				
+			if ($.inArray(paragraph.type, editor.elements) == -1) {
+				continue;
+			}
+			editor[paragraph.type].output(paragraph, target);
+		}
+		
 	},
 	resetChild: function(){
 		$(".editorChild.active").find("*").each(function(){

@@ -59,7 +59,12 @@ editor.list = {
 
 		this.bindControl(paragraphBox);
 	},
-	output: function(paragraph){
+	output: function(paragraph, target){
+	
+		if ( target == undefined ) {
+			target = $("#articleContent");
+		}
+
 		var paragraphBox = $("<div class=\"part\">");
 		paragraphBox.attr("data-type", "list");
 
@@ -71,7 +76,7 @@ editor.list = {
 		  $("<li>" + element + "</li>").appendTo(ulContainer);			  
 		}
 		  
-		$("#articleContent").append(paragraphBox);
+		target.append(paragraphBox);
 
 		return paragraphBox;
 	},

@@ -2,7 +2,9 @@ class NewsController < ApplicationController
 
   def index
     @news = News.order('created_at DESC').page(params[:page])
-
+    
+    @f_news = @news.first
+    
     respond_to do |format|
       format.html # index.html.erb
       format.json { render json: @news }
@@ -13,6 +15,7 @@ class NewsController < ApplicationController
 
     respond_to do |format|
       format.html # show.html.erb
+      format.js
       format.json { render json: @news }
     end
   end

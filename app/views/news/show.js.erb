@@ -1,0 +1,25 @@
+
+var newsContent = '<%=@news.content.html_safe%>';
+
+var newsContainer = $('<div class="news">');
+var titleContainer = $('<div class="title">').append(
+	$('<div class="date"> <%=@news.date.year %><br><span class="md"><%= "#{@news.date.month}-#{@news.date.day}" %></span></div>')
+).append(
+	$('<h3><%= @news.name %></h3>')
+).append(
+	$('<img src="<%= image_path("upd-02.png") %>">')
+);
+var textContainer = $('<div class="text">');
+
+editor.output(newsContent, textContainer);
+
+newsContainer.append(titleContainer).append(textContainer).appendTo("#content").hide().fadeIn('slow')slideUp('slow');
+
+titleContainer.click(function(){
+	$(this).addClass('active').parents('.news').siblings().children().removeClass('active');
+	var $side_text = $(this).next('.text');
+	if(!$side_text.is(':visible')){
+		$('.news .text:visible').slideUp();
+	}
+	$side_text.slideToggle();
+}).siblings().hide();
