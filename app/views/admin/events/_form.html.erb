@@ -1,16 +1,15 @@
+<% if @event.errors.any?  %>
+<script>
+	var message = "<%= @event.errors.count.to_s + "個問題必須修正：" %>" + " <br />";
+	<% @event.errors.full_messages.each do | m | %>
+	message += "<%= m %><br />";
+	<% end %>
+
+	Alertify.dialog.alert(message);	
+</script>
+<% end %>
+
 <%= form_for([:admin, @event]) do |f| %>
-  <% if @event.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@event.errors.count, "error") %> prohibited this event from being saved:</h2>
-
-      <ul>
-      <% @event.errors.full_messages.each do |msg| %>
-        <li><%= msg %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
 
     <section class="title">
       <table width="100%" border="0" cellspacing="0" cellpadding="0">
