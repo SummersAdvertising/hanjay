@@ -36,7 +36,7 @@ article h3{font:300 50px "微軟正黑體";line-height:1.7em}
 
 /*-黃1-*/
 #service-1-1{background:#FAAB00}
-#service-1-1 section{height:545px;background:image-url("idx-04-bg.jpg") 690px 0 no-repeat,image-url("idx-04.jpg") 0 center no-repeat;padding:75px 0 0 515px}
+#service-1-1 section{height:545px;background:image-url("idx-04.jpg") 0 center no-repeat;background:image-url("idx-04-bg.jpg") 690px 0 no-repeat,image-url("idx-04.jpg") 0 center no-repeat;padding:75px 0 0 515px}
 #service-1-1 p{padding:0 0 30px 0;width:500px}
 #service-1-1 p a{color:#0000ff;text-decoration:underline}
 #service-1-1 p a:hover{text-decoration:none}
@@ -46,7 +46,7 @@ article h3{font:300 50px "微軟正黑體";line-height:1.7em}
 
 /*-黃2-*/
 #service-1-2{background:#FBC12B}
-#service-1-2 section{height:495px;background:image-url("idx-05-bg.jpg") 120px 0 no-repeat,image-url("idx-05.jpg") right center no-repeat;padding:75px 0 0 0}
+#service-1-2 section{height:495px;background:image-url("idx-05.jpg") right center no-repeat;background:image-url("idx-05-bg.jpg") 120px 0 no-repeat,image-url("idx-05.jpg") right center no-repeat;padding:75px 0 0 0}
 #service-1-2 p{padding:0 0 30px 0;width:500px}
 #service-1-2 p a{color:#0000ff;text-decoration:underline}
 #service-1-2 p a:hover{text-decoration:none}
@@ -60,7 +60,7 @@ article h3{font:300 50px "微軟正黑體";line-height:1.7em}
 
 /*-藍2-*/
 #service-2-1{background:#0C81E8}
-#service-2-1 section{height:495px;background:image-url("idx-06-bg.jpg") 690px 0 no-repeat,image-url("idx-06.jpg") 50px center no-repeat;padding:75px 0 0 515px;color:#fff}
+#service-2-1 section{height:495px;background:image-url("idx-06.jpg") 50px center no-repeat;background:image-url("idx-06-bg.jpg") 690px 0 no-repeat,image-url("idx-06.jpg") 50px center no-repeat;padding:75px 0 0 515px;color:#fff}
 #service-2-1 p{padding:0 0 30px 0;width:500px}
 #service-2-1 p a{color:#ffde00;text-decoration:underline}
 #service-2-1 p a:hover{text-decoration:none}
@@ -70,7 +70,7 @@ article h3{font:300 50px "微軟正黑體";line-height:1.7em}
 
 /*-藍3-*/
 #service-2-2{background:#2391F7}
-#service-2-2 section{height:495px;background:image-url("idx-07.jpg") right center no-repeat;background:image-url("idx-07-bg.jpg") 120px 0 no-repeat,image-url("idx-07.jpg") right center no-repeat;padding:75px 0 0 0;color:#fff}
+#service-2-2 section{height:495px;background:image-url("idx-07.jpg") right center no-repeat;background:image-url("idx-07.jpg") right center no-repeat;background:image-url("idx-07-bg.jpg") 120px 0 no-repeat,image-url("idx-07.jpg") right center no-repeat;padding:75px 0 0 0;color:#fff}
 #service-2-2 p{padding:0 0 30px 0;width:500px}
 #service-2-2 p a{color:#ffde00;text-decoration:underline}
 #service-2-2 p a:hover{text-decoration:none}
@@ -85,7 +85,6 @@ article h3{font:300 50px "微軟正黑體";line-height:1.7em}
 #partner ul{width:500px;overflow:hidden}
 #partner li{float:left;width:250px;padding:0 0 25px 25px;background:image-url("idx-08-plus.jpg") 0 7px no-repeat;font-size:20px}
 #partner a{color:#fff;font-size:18px}
-
 
 #update{overflow:hidden}
 #update section{height:330px;padding:75px 0}
@@ -105,7 +104,7 @@ article h3{font:300 50px "微軟正黑體";line-height:1.7em}
 .box strong{background:#C1F078;padding:2px 5px;font-weight:300}
 
 aside{background:#001B56}
-aside section{padding:60px 0 0 130px;height:325px;background:image-url("idx-aside-bg.jpg") 130px 0 no-repeat,image-url("aside-bg.jpg") 690px center no-repeat}
+aside section{padding:60px 0 0 130px;height:325px;background:image-url("aside-bg.jpg") 690px center no-repeat;background:image-url("idx-aside-bg.jpg") 130px 0 no-repeat,image-url("aside-bg.jpg") 690px center no-repeat}
 aside h6{color:#4f86ff;font:300 27px "微軟正黑體";height:35px}
 aside nav{color:#fff;height:115px}
 aside a{color:#fff;font-size:14px}
