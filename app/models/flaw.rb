@@ -4,6 +4,7 @@ class Flaw < ActiveRecord::Base
   
   validates :issue, :presence => { :message => "議題不得為空白" }
   
+  after_initialize :fill_defaults
   before_save :fill_defaults
   
   def fill_defaults
