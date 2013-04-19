@@ -63,6 +63,7 @@ Hanjay::Application.routes.draw do
  
   match "/admin/createAdmin" => "admin#createAdmin", :via => :post
   match '/admin/showAdmins' => 'admin#showAdmins' 
+  match '/admin/deleteAdmin/:id' => 'admin#deleteAdmin' , :via => :delete
   
   match "/admin/loginCheck" => "admin#loginCheck", :via => :post
   match "/admin/update" => "admin#update", :via => :put
@@ -71,7 +72,6 @@ Hanjay::Application.routes.draw do
   namespace :admin do
     get "sign_up", "log_in", "log_out", "edit"
     
-    match '/deleteAdmin/:id' => 'admin#deleteAdmin' , :via => :delete
 
     resources :events
     resources :flaws
