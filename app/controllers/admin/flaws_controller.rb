@@ -6,7 +6,7 @@ class Admin::FlawsController < ApplicationController
   # GET /flaws
   # GET /flaws.json
   def index
-    @flaws = Flaw.order("date DESC, created_at DESC").all
+    @flaws = Flaw.order("date DESC, created_at DESC").page( params[:page] ).per(10)
     
     @flaw = Flaw.new
     

@@ -17,7 +17,6 @@ class Event < ActiveRecord::Base
   	if self.date.nil?
   		self.date = Time.now
   	end
-  
   end
 
   

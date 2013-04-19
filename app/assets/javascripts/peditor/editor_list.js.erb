@@ -3,7 +3,7 @@ editor.list = {
 		var li = $("<li>");
 		li.attr("data-type", "list");
 		//li.append("插入清單");
-		$('<li id="list-tab"><a href="#post-list"><img src="<%= image_path("list.png") %>"/>插入清單</a></li>').appendTo(li);
+		$('<a href="#post-list"><img src="<%= image_path("list.png") %>"/>插入清單</a>').appendTo(li);
 		$(".editorList").append(li);
 		
 		var editorChild = $("<div>");

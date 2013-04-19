@@ -67,7 +67,7 @@ Hanjay::Application.routes.draw do
   
   match "/admin/loginCheck" => "admin#loginCheck", :via => :post
   match "/admin/update" => "admin#update", :via => :put
-  match '/admin' => 'admin#showAdmins'    
+  match '/admin' => 'admin/news#index'    
   
   namespace :admin do
     get "sign_up", "log_in", "log_out", "edit"

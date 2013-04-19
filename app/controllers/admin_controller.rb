@@ -1,3 +1,4 @@
+# encoding: utf-8
 class AdminController < ApplicationController
   before_filter :require_is_admin, :except => [:log_in, :log_out, :loginCheck]
   def showAdmins
@@ -39,7 +40,7 @@ class AdminController < ApplicationController
         flash[:notice] = 'successfully updated.'
         session[:admin] = @admin.name
 
-        format.html { redirect_to admin_edit_path, :notice =>"successfully updated." }
+        format.html { redirect_to admin_edit_path, :notice =>"更新完成" }
         format.json { head :no_content }
       else
         format.html { redirect_to admin_edit_path }

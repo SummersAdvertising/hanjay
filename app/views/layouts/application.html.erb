@@ -10,9 +10,10 @@
 <meta property="og:type" content="company"/>
 
 
-<%= ( render :partial => 'meta') if params[ :controller ] != "static_page" %>
-
 <title>漢杰科技-網路安全風險診斷專家</title>
+
+
+<%= ( render :partial => 'meta') if params[ :controller ] != "static_page" %>
   
 <%= stylesheet_link_tag "reset", :media => :all %>
 <%= stylesheet_link_tag "application" %>
@@ -22,6 +23,22 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
+
+
+<script>
+
+	function setMenu(menu) {
+		$('nav a.active').removeClass('active');
+		$('nav a[href*="' + menu + '"]').addClass('active');
+	}
+	
+	
+	$(document).ready(function() {
+		setMenu("<%= params[ :controller ] %>");
+		
+	});
+	
+</script>
 
 <header _height="none">
   <section>

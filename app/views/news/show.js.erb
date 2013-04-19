@@ -1,4 +1,3 @@
-
 var newsContent = '<%=@news.content.html_safe%>';
 
 var newsContainer = $('<div class="news">');
@@ -23,3 +22,9 @@ titleContainer.click(function(){
 	}
 	$side_text.slideToggle();
 }).siblings().hide();
+console.log(<%= @news.id %>);
+if ( "<%= @news.id %>" == window.location.hash.strsub(1) ) {
+	
+	titleContainer.click();
+	
+}

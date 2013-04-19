@@ -122,13 +122,14 @@ border-radius:5px;width:202px}
 .tool-a a{float:left;margin:0 5px 0 0}
 .tool-b a,.tool-a a{display:block;border:1px solid #ccc;background:#fff;font:300 11px "verdana";padding:5px 0;width:50px;text-align:center;border-radius:5px;}
 .tool-b a:hover,.tool-a a:hover{background:#eee}
-
 /*-----------------------------------------------------------------------頁碼---*/
 
-.page{text-align:center}
+.page{text-align:center;width:100%}
+.page ul{}
+.page li{display:inline;}
 .page a{display:inline-block;width:20px;height:20px;margin:0 2.5px;border-radius:5px;padding:1px 0 0 0;font:300 12px "verdana";text-shadow:0 1px 0 #fff}
 .page a:hover{border:1px solid #ccc}
-.page .active{background:image-url("list.jpg") 0 0 repeat-x;border:1px solid #ccc}
+.page .active a{background:url(../images/list.jpg) 0 0 repeat-x;border:1px solid #ccc}
 
 /*-----------------------------------------------------------------------欄位---*/
 
@@ -157,3 +158,4 @@ footer a{font:300 13px "Times New Roman", Times, serif;text-shadow:0 1px 0 #fff}
 .login article{width:300px;float:none;margin:0 auto;}
 .login .text{border:none;background:none;padding:0}
 .login .text div{padding:5px 0}
+
