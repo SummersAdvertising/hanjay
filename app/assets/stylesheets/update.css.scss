@@ -10,6 +10,8 @@ article section{background:image-url("upd-01.jpg") right 30px no-repeat}
 
 .news:nth-child(1) .title{padding:0;border:none;height:70px}
 .news:nth-child(1) img{top:25px}
+.news:nth-child(1) .date{background:#00CDD4!important}
+.news:nth-child(1) .active h3{background:#CDE9EA!important;color:#14A1A6!important}
 .news:nth-child(2n-1) .date{background:#3194EA}
 .news:nth-child(2n-1) .active h3{background:#BBDFFF;color:#004098}
 
