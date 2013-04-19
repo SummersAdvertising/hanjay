@@ -25,16 +25,41 @@
       </tr>
     </table>
   </div>
+  
   <div class="half">
     <table width="100%" border="0" cellspacing="0" cellpadding="0">
       <tr>
-        <th valign="top"><%= f.label :password, "密碼" %></th>
+        <th valign="top">密碼：</th>
         <td><%= f.password_field :password, :autocomplete => "off", :class => "validate" %></td>
       </tr>
     </table>
   </div>
+  <div class="half">
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <th valign="top">確認密碼：</th>
+        <td><input id="pswCheck" type="password" name="textfield" /></td>
+      </tr>
+    </table>
+  </div>
 </section>
-<section class="button"><a href="javascript: $('#new_admin').submit();"><img src="<%= image_path("add.png") %>">新增帳號</a> </section>
+<section class="button"><a id="btnSubmit" href="javascript: void(0);"><img src="<%= image_path("add.png") %>">新增帳號</a> </section>
+
+
+<script type="text/javascript">
+$("#btnSubmit").click(function(){
+	$('#new_admin').submit();
+});
+$("#new_admin").submit(function(){
+	var check = ($("#admin_password").val()==$("#pswCheck").val());
+	if(check == false){
+		Alertify.log.error("密碼不一致, 更新失敗");
+	}
+	return check;
+});
+
+</script>
+
 <% end %>
 <!--button-->
 <section class="list">

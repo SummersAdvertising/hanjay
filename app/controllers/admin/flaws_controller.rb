@@ -83,7 +83,7 @@ class Admin::FlawsController < ApplicationController
     @flaw.destroy
 
     respond_to do |format|
-      format.html { redirect_to flaws_url }
+      format.html { redirect_to admin_flaws_url }
       format.json { head :no_content }
     end
   end
