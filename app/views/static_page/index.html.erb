@@ -22,11 +22,11 @@
 <%= stylesheet_link_tag "index", :media => :all %>
 
 <%= javascript_include_tag "application" %>
-<script>
+<!--script>
 $(document).ready(function(){
 	$(".iframe").colorbox({iframe:true, width:"80%", height:"80%"});
 });
-</script>
+</script-->
 </head>
 
 <body>
@@ -34,7 +34,7 @@ $(document).ready(function(){
 <header _height="none">
   <section>
     <h1><a href="<%= root_url %>">HANJAY</a></h1>
-    <nav> <a href="<%= root_url + "#about-link" %>">關於漢杰</a> <a href="<%= news_index_path %>">最新消息</a> <a href="<%= page_path( :id => "support" ) %>">支援與服務</a> <a href="<%= root_url + "#partner-link" %>">夥伴與方案</a> <a href="<%= root_url + "#service-link" %>">漢杰服務</a></nav>
+    <nav> <a href="<%= root_url + "#about-link" %>">關於漢杰</a> <a href="<%= root_url + "#update-link" %>">最新消息</a> <a href="<%= page_path( :id => "support" ) %>">支援與服務</a> <a href="<%= root_url + "#partner-link" %>">夥伴與方案</a> <a href="<%= root_url + "#service-link" %>">漢杰服務</a></nav>
   </section>
 </header>
 
@@ -50,13 +50,13 @@ $(document).ready(function(){
   </section>
 </article>
 <h2 id="service-1-h2">
-<a id="service-link" style="position:relative;top:-85px"></a>
+<a id="service-link" style="position:absolute;top:-85px"></a>
   <section> </section>
 </h2>
 <article id="service-1-1">
   <section>
     <h3>資料外洩查核服務</h3>
-    <p>漢杰科技提供機敏資料外洩查核與防護方案，透過資料庫安全存取稽核、Web 應用層穿透威脅分析，安全弱點控制，可積極協助與管制各樣潛藏的資料外洩風險 ... <!--a href="#">more</a--></p>
+    <p>漢杰科技提供機敏資料外洩查核與防護方案，透過資料庫安全存取稽核、Web 應用層穿透威脅分析，安全弱點控制，可積極協助與管制各樣潛藏的資料外洩風險。 <!--a href="#">... more</a--></p>
     <ul>
       <li><a class="iframe">資料庫安全稽核</a></li>
       <li><a class="iframe">Web 應用層穿透威脅分析</a></li>
@@ -69,7 +69,7 @@ $(document).ready(function(){
 <article id="service-1-2">
   <section>
     <h3>內網惡意流量分析服務</h3>
-    <p>漢杰科技協助客戶進行網路應用層惡意流量鑑識分析，此分析可清楚診斷內網不當流量來源與活動分佈，掃除殭屍電腦植入與 APT 攻擊威脅，並積極提供內網 QoS 管理，可滿足網路營運不中斷，不延遲的目標 ... <!--a href="#">more</a--></p>
+    <p>漢杰科技協助客戶進行網路應用層惡意流量鑑識分析，此分析可清楚診斷內網不當流量來源與活動分佈，掃除殭屍電腦植入與 APT 攻擊威脅，並積極提供內網 QoS 管理，可滿足網路營運不中斷，不延遲的目標。 <!--a href="#">... more</a--></p>
     <ul>
       <li><a class="iframe">分析目標網路，高風險惡意流量來源與影響分佈</a></li>
       <li><a class="iframe">警示網路中存在的殭屍電腦 (Botnet) 與不明 Tunnel 活動</a></li>
@@ -84,7 +84,7 @@ $(document).ready(function(){
 <article id="service-2-1">
   <section>
     <h3>安全弱點掃描服務</h3>
-    <p>漢杰科技提供安全弱點掃描服務，可自雲端與近端2種方式進行，並特別針對高風險弱點做覆查與修補建議，風險差異性分析報告亦可滿足客戶 ISO27001 / 20000 之驗證要求。 ... <!--a href="#">more</a--></p>
+    <p>漢杰科技提供安全弱點掃描服務，可自雲端與近端2種方式進行，並特別針對高風險弱點做覆查與修補建議，風險差異性分析報告亦可滿足客戶 ISO27001 / 20000 之驗證要求。 <!--a href="#">... more</a--></p>
     <ul>
       <li><a class="iframe">提供 IPv4/IPv6 雙協定弱點分析報告</a></li>
       <li><a class="iframe">雲端掃描或隔離環境之近端掃描</a></li>
@@ -96,7 +96,7 @@ $(document).ready(function(){
 <article id="service-2-2">
   <section>
     <h3>電腦鑑識與數位證據服務</h3>
-    <p>提供資訊資產管理與電腦鑑識服務，針對機密敏感性資料的不當使用提供預防、偵測、回應3項策略性建議與實務稽查分析，可滿足客戶數位證據的法院舉證效力。 ... <!--a href="#">more</a--></p>
+    <p>提供資訊資產管理與電腦鑑識服務，針對機密敏感性資料的不當使用提供預防、偵測、回應3項策略性建議與實務稽查分析，可滿足客戶數位證據的法院舉證效力。 <!--a href="#">... more</a--></p>
     <ul>
       <li><a class="iframe">數位資料封存、刪除重建與無汙染證據保全</a></li>
       <li><a class="iframe">特徵資料存取軌跡與鑑識</a></li>
@@ -106,7 +106,7 @@ $(document).ready(function(){
   </section>
 </article>
 <article id="partner">
-<a id="partner-link" style="position:relative;top:-85px"></a>
+<a id="partner-link" style="position:absolute;top:-85px"></a>
   <section>
     <h3>夥伴與方案</h3>
     <p>漢杰科技與多家業界知名技術公司合作，提供最適宜的工具與產品解決方案</p>
@@ -128,6 +128,7 @@ $(document).ready(function(){
   </section>
 </article>
 <article id="update">
+<a id="update-link" style="position:absolute;top:-85px"></a>
   <section>
     <div id="bulletin">
       <h4>安全弱點通報</h4>
@@ -148,13 +149,13 @@ $(document).ready(function(){
           <td width="22%">+   <%= news.date.to_s(:date_slashed) %></td>
           <td width="78%"><%= link_to news.name, news_index_path %></td>
         </tr>      
-      <% end %>
+      <% end %>          
       </table>
     </div>
   </section>
 </article>
 <article id="about">
-<a id="about-link" style="position:relative;top:-85px"></a>
+<a id="about-link" style="position:absolute;top:-85px"></a>
   <section>
     <div id="found">
       <h4>關於漢杰科技</h4>

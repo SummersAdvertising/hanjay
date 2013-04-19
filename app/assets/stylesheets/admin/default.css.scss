@@ -84,6 +84,7 @@ border-radius:5px;width:202px}
 .tab img{position:relative;top:4px;margin:0 5px 0 0}
 
 /*-----------------------------------------------------------------------頁籤＠2---*/
+
 .paragraphContainer { border-width: 1px; border-style: solid; margin: 5px;}
 .editorList { padding-left: 0px;}
 .editorList li{ display: inline-block; }
@@ -97,13 +98,11 @@ border-radius:5px;width:202px}
 .post textarea{min-height:100px}
 
 #post-list ul{margin:0 0 3px 0}
-.addlist a{display:block;border:1px solid #ccc;background:#fff;font:300 11px "verdana";padding:5px 0;width:50px;text-align:center;border-radius:5px}
+.addlist a{display:block;border:1px solid #ccc;background:#fff;font:300 11px "verdana";padding:5px 0;width:50px;height:27px;text-align:center;border-radius:5px}
 .addlist a:hover{background:#eee}
 
 .addlink{text-shadow:0 1px 0 #fff}
 .addlink img{position:relative;top:4px}
-
-
 
 /*-----------------------------------------------------------------------預覽---*/
 
@@ -115,6 +114,7 @@ border-radius:5px;width:202px}
 .preview .part:last-child{border-radius:0 0 5px 5px}
 .preview .space{height:50px;background:#fff;border:1px dashed #ccc}
 .preview textarea{width:100%;border-radius:5px;border:1px solid #ccc;padding:5px;min-height:100px;font:300 13px 新細明體;color:#555;} 
+.preview .part-title{font-weight:900}
 
 .tool-b{overflow:hidden;position:absolute;top:5px;right:5px;display:none}
 .tool-b a{float:left;margin:0 0 0 5px}
