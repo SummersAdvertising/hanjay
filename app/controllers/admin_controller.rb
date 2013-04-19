@@ -51,11 +51,12 @@ class AdminController < ApplicationController
 
   def createAdmin
   	@admin = Admin.new(params[:admin])
-  	@admin.password = Digest::SHA1.hexdigest(@admin.password)
+  	@admin.password = Digest::SHA1.hexdigest(@admin.password) if @admin.password.length > 0
 
     respond_to do |format|
       if !@admin.save
-        flash[:error] = "username is existed."
+        flash[:error] = @admin.errors.full_messages[0]
+        format.html { redirect_to admin_showAdmins_path  }
       end
       format.html { redirect_to admin_showAdmins_path }
     end

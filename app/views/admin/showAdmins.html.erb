@@ -2,7 +2,7 @@
 <% if flash[:error] %>
 <script>
     $(function() {
-	    Alertify.log.error('同樣的帳號已經註冊過了');
+	    Alertify.log.error('<%= flash[:error]  %>');
     })
 </script>
 <% end %>
