@@ -4,7 +4,7 @@ class Admin::NewsController < ApplicationController
   layout 'admin'
 
   def index
-    @news = News.order('created_at DESC').page(params[:page]).per(10)
+    @news = News.order('created_at DESC').page( params[:page] ).per(2)
 
     respond_to do |format|
       format.html # index.html.erb

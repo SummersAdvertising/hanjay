@@ -9,7 +9,8 @@
 <meta property="og:image" content="www.hanjay.com/images/thumb.jpg"/>
 <meta property="og:type" content="company"/>
 
-<%= render :partial => 'meta' %>
+
+<%= ( render :partial => 'meta') if params[ :controller ] != "static_page" %>
 
 <title>漢杰科技-網路安全風險診斷專家</title>
   
@@ -26,7 +27,7 @@
   <section>
     <h1><a href="<%= root_url %>">HANJAY</a></h1>
     
-    <nav> <a href="<%= news_index_path %>">最新消息</a> <a href="<%= flaws_path %>">安全弱點通報</a> <a href="<%= page_path( :id => "support" ) %>">支援與服務</a> <a href="<%= root_url %>">漢杰服務</a> </nav>
+    <nav> <a href="<%= news_index_path %>">最新消息</a> <a href="<%= flaws_path %>">安全弱點通報</a> <a href="<%= page_path( :id => "support" ) %>">支援與服務</a> <a href="<%= root_url + '#service-link' %>">漢杰服務</a> </nav>
     
   </section>
 </header>

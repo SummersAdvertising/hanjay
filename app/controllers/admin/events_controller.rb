@@ -17,7 +17,7 @@ class Admin::EventsController < ApplicationController
 				
 		end
 		
-		@events = Event.where(where_clause).order( "date DESC" )
+		@events = Event.where(where_clause).order( "date DESC" ).page( params[:page] ).per(2)
 	
 	end
 	
