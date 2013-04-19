@@ -61,7 +61,7 @@ editor.paragraph = {
 			return ;
 		} 
 		
-		if ( !/^http(s)?:\/\/[\w\.\-\_\/:]+$/.test($("#newParagraphLink").val()) ) {			
+		if ( $("#newParagraphLink").val() && !/^http(s)?:\/\/[\w\.\-\_\/:]+$/.test($("#newParagraphLink").val()) ) {			
 			editor.alert("連結格式有誤", "error");
 			return ;
 		}
