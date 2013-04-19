@@ -5,7 +5,7 @@ class StaticPageController < ApplicationController
   	
   	@flaws = Flaw.where("status = 'enable'").order('date DESC').limit(5)
   	
-  	@event = Event.where( :status => "enable" ).order( "date ASC" ).first
+  	@event = Event.where( "status = ? AND date > ?  ","enable", Time.now.tomorrow ).order( "date ASC" ).first
   	
   end
   
