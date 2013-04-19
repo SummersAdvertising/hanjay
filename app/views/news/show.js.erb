@@ -1,30 +1,34 @@
-var newsContent = '<%=@news.content.html_safe%>';
-
-var newsContainer = $('<div class="news">');
-var titleContainer = $('<div class="title">').append(
-	$('<div class="date"> <%=@news.date.year %><br><span class="md"><%= "#{@news.date.month}.#{@news.date.day}" %></span></div>')
-).append(
-	$('<h3><%= @news.name %></h3>')
-).append(
-	$('<img src="<%= image_path("upd-02.png") %>">')
-);
-var textContainer = $('<div class="text">');
-
-editor.output(newsContent, textContainer);
-
-newsContainer.append(titleContainer).append(textContainer).appendTo("#content").hide().fadeIn('slow').slideDown('slow');
-
-titleContainer.click(function(){
-	$(this).addClass('active').parents('.news').siblings().children().removeClass('active');
-	var $side_text = $(this).next('.text');
-	if(!$side_text.is(':visible')){
-		$('.news .text:visible').slideUp();
+function temp_<%= @news.id %>() {	
+	var newsContent = '<%=@news.content.html_safe%>';
+	
+	var newsContainer = $('<div class="news">');
+	var titleContainer = $('<div class="title">').append(
+		$('<div class="date"> <%=@news.date.year %><br><span class="md"><%= "#{@news.date.month}.#{@news.date.day}" %></span></div>')
+	).append(
+		$('<h3><%= @news.name %></h3>')
+	).append(
+		$('<img src="<%= image_path("upd-02.png") %>">')
+	);
+	var textContainer = $('<div class="text">');
+	
+	editor.output(newsContent, textContainer);
+	
+	newsContainer.append(titleContainer).append(textContainer).appendTo("#content").hide().fadeIn('slow').slideDown('slow');
+	
+	titleContainer.click(function(){
+		$(this).addClass('active').parents('.news').siblings().children().removeClass('active');
+		var $side_text = $(this).next('.text');
+		if(!$side_text.is(':visible')){
+			$('.news .text:visible').slideUp();
+		}
+		$side_text.slideToggle();
+	}).siblings().hide();
+	
+	if ( "<%= @news.id %>" == window.location.hash.substr(8) ) {
+		titleContainer.click();
+	     $('html, body').animate({
+	         scrollTop: newsContainer.siblings().eq(newsContainer.index()-1).offset().top - newsContainer.siblings().eq(0).height()/2 - 150
+	     }, 1000);
 	}
-	$side_text.slideToggle();
-}).siblings().hide();
-console.log(<%= @news.id %>);
-if ( "<%= @news.id %>" == window.location.hash.strsub(1) ) {
-	
-	titleContainer.click();
-	
 }
+temp_<%= @news.id %>();
