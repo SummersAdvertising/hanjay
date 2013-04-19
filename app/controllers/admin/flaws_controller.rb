@@ -53,7 +53,8 @@ class Admin::FlawsController < ApplicationController
         format.html { redirect_to admin_flaws_path, notice: '新增完成' }
         format.json { render json: @flaw, status: :created, location: @flaw }
       else
-        format.html { redirect_to admin_flaws_path }
+      	@flaws = Flaw.order("date DESC, created_at DESC").all
+        format.html { render :index }
         format.json { render json: @flaw.errors, status: :unprocessable_entity }
       end
     end

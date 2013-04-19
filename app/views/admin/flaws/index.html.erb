@@ -1,3 +1,13 @@
+<% if @flaw.errors.any?  %>
+<script>
+	var message = "";
+	<% @flaw.errors.full_messages.each do | m | %>
+	message += "<%= m %><br />";
+	<% end %>
+
+	Alertify.dialog.alert(message);	
+</script>
+<% end %>
 <%= form_for([:admin, @flaw]) do | f | %>
 <section class="text text-edit">
 	
@@ -13,7 +23,7 @@
     <table width="100%" border="0" cellspacing="0" cellpadding="0">
       <tr>
         <th valign="top"><%= f.label :issue, "文章標題：" %></th>
-        <td><%= f.text_field :issue %></td>
+        <td><%= f.text_field :issue %><%= "<div style=\"color: red;\">#{@flaw.errors.messages[ :issue ][0]}</div>".html_safe if @flaw.errors.any? && !@flaw.errors.messages[ :issue ].nil? %></td>
       </tr>
     </table>
   </div>
@@ -21,7 +31,7 @@
     <table width="100%" border="0" cellspacing="0" cellpadding="0">
       <tr>
         <th><%= f.label :status, "前台顯示？" %></th>
-        <td><%= f.check_box :status, { :checked => ("checked" if @flaw.status == "enable") }, "enable" %>
+        <td><%= f.check_box :status, { :checked => ("checked" if @flaw.status == "enable"), :id => :checkbox }, "enable" %>
           ( 若無勾選則不發佈 )</td>
       </tr>
     </table>
