@@ -44,6 +44,7 @@ class Admin::EventsController < ApplicationController
 		
 		respond_to do | format |
 			if @event.save
+				flash[ :notice ] =  "課程已建立"
 				format.html { redirect_to admin_events_path }
 			else
 				format.html { render :new }

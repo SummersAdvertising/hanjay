@@ -1,3 +1,4 @@
+# encoding: utf-8
 class Admin::NewsController < ApplicationController
   before_filter :require_is_admin
   layout 'admin'
@@ -66,7 +67,7 @@ class Admin::NewsController < ApplicationController
 
     respond_to do |format|
       if @news.save
-        format.html { redirect_to edit_admin_news_path(@news), notice: 'News was successfully created.' }
+        format.html { redirect_to edit_admin_news_path(@news), notice: '已建立最新消息' }
         format.json { render json: @news, status: :created, location: @news }
       else
         format.html { render action: "new" }
@@ -82,7 +83,7 @@ class Admin::NewsController < ApplicationController
 
     respond_to do |format|
       if @news.update_attributes(params[:news])
-        format.html { redirect_to admin_news_path(@news), notice: 'News was successfully updated.' }
+        format.html { redirect_to admin_news_path(@news), notice: '最新消息更新完成' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }

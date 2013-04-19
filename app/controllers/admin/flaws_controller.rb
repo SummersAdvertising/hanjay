@@ -66,7 +66,7 @@ class Admin::FlawsController < ApplicationController
 
     respond_to do |format|
       if @flaw.update_attributes(params[:flaw])
-        format.html { redirect_to admin_flaws_path, notice: 'Flaw was successfully updated.' }
+        format.html { redirect_to admin_flaws_path, notice: '弱點通報更新完成' }
         format.js {}
       else
         format.html { render action: "edit" }
