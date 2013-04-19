@@ -2,12 +2,14 @@
 <aside _height="none">
   <section>
     <h6>網路安全風險診斷專家</h6>
-    <nav><a href="<%= root_url %>">首頁</a> ｜ <a href="<%= page_path( :support ) %>">支援與服務 </a>｜ <a href="<%= news_index_path %>">最新消息 </a>｜ <a href="<%= events_path %>">漢杰活動</a></nav>
-    <div id="info"> 漢杰科技股份有限公司<br>
-      11492 台北市內湖區瑞光路607號4樓 </div>
+    <nav><a href="<%= root_url %>">首頁</a> ｜ <a href="<%= page_path( :support ) %>">支援與服務 </a>｜<a href="<%= news_index_path %>">最新消息 </a>｜ <a href="<%= flaws_path %>">安全弱點分析 </a>｜ <a href="<%= events_path %>">漢杰活動</a></nav>
+    <div id="info" itemscope itemtype="http://data-vocabulary.org/Organization"> <span itemprop="name">漢杰科技股份有限公司</span><br>
+      <span itemprop="address" itemscope itemtype="http://data-vocabulary.org/Address">
+	<span itemprop="region">台北市</span><span itemprop="locality">內湖區</span><span itemprop="street-address">瑞光路607號4樓</span>
+	</span> </div>
   </section>
 </aside>
 
 <footer _height="none">
-  <section>©2013 HANJAY All Right Reserved     <a href="http://www.summers.com.tw" target="_blank">網頁設計 By 夏天廣告</a> </section>
+  <section>©2013 HANJAY. All Right Reserved.     <a href="http://www.summers.com.tw" target="_blank" title="網頁設計 By 夏天廣告">網頁設計 By 夏天廣告</a> </section>
 </footer>

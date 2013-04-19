@@ -34,7 +34,7 @@ $(document).ready(function(){
 <header _height="none">
   <section>
     <h1><a href="<%= root_url %>">HANJAY</a></h1>
-    <nav> <a href="<%= root_url + "#about-link" %>">關於漢杰</a> <a href="<%= news_index_path %>">最新消息</a> <a href="<%= page_path( :id => "support" ) %>">支援與服務</a> <a href="<%= root_url + "#partner-link" %>">夥伴與方案</a> <a href="<%= root_url + "#service-link" %>">漢杰服務</a></nav>
+    <nav> <a href="<%= root_url + "#about-link" %>">關於漢杰</a> <a href="<%= root_url + "#update-link" %>">最新消息</a> <a href="<%= page_path( :id => "support" ) %>">支援與服務</a> <a href="<%= root_url + "#partner-link" %>">夥伴與方案</a> <a href="<%= root_url + "#service-link" %>">漢杰服務</a></nav>
   </section>
 </header>
 
@@ -128,6 +128,7 @@ $(document).ready(function(){
   </section>
 </article>
 <article id="update">
+<a id="update-link" style="position:absolute;top:-85px"></a>
   <section>
     <div id="bulletin">
       <h4>安全弱點通報</h4>
