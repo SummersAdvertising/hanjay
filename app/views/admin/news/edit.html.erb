@@ -81,7 +81,7 @@
             <th>
 		    	<%= f.label :status, "顯示？" %>
 		    </th>
-            <td><%= f.check_box :status, { :checked => ("checked" if @news.status == "enable") }, "enable" %>
+            <td><%= f.check_box :status, { :checked => ("checked" if @news.status == "enable"), :class => "checkbox"}, "enable" %>
               ( 若無勾選則不發佈 )</td>
           </tr>
         </table>

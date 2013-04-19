@@ -3,7 +3,7 @@ var newsContent = '<%=@news.content.html_safe%>';
 
 var newsContainer = $('<div class="news">');
 var titleContainer = $('<div class="title">').append(
-	$('<div class="date"> <%=@news.date.year %><br><span class="md"><%= "#{@news.date.month}-#{@news.date.day}" %></span></div>')
+	$('<div class="date"> <%=@news.date.year %><br><span class="md"><%= "#{@news.date.month}.#{@news.date.day}" %></span></div>')
 ).append(
 	$('<h3><%= @news.name %></h3>')
 ).append(
