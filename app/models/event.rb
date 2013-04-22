@@ -4,7 +4,7 @@ class Event < ActiveRecord::Base
   
   validates :title, :presence => { :message => "活動標題不得為空"}
   
-  validates :link, :format => { :with => /^http(s)?:\/\/[\w\.\-\_\/:]+$/, :message => "請輸入正確網址格式" }
+  validates :link, :format => { :with => /^http(s)?:\/\/[\w\.\-\_\/:\?\%\=\;\&\_\-\+]+$/, :message => "請輸入正確網址格式" }
     
   after_initialize :fill_defaults
   before_create :fill_defaults

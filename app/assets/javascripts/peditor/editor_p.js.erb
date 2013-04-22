@@ -5,7 +5,7 @@ editor.paragraph = {
 		//li.append("插入段落");
 		$('<a href="#post-p"><img src="<%= image_path("edit.png") %>">插入段落</a>').appendTo(li);
 		$(".editorList").append(li);
-		
+		      
 		var editorChild = $("<div>");
 		editorChild.attr("id", "post-p");
 		editorChild.addClass("editorChild");
@@ -61,7 +61,7 @@ editor.paragraph = {
 			return ;
 		} 
 		
-		if ( $("#newParagraphLink").val() && !/^http(s)?:\/\/[\w\.\-\_\/:]+$/.test($("#newParagraphLink").val()) ) {			
+		if ( $("#newParagraphLink").val() && !/^http(s)?:\/\/[\w\.\-\_\/:\?\%\=\;\&\_\-\+]+$/.test($("#newParagraphLink").val()) ) {			
 			editor.alert("連結格式有誤", "error");
 			return ;
 		}
