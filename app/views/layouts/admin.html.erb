@@ -16,6 +16,9 @@
 <%= stylesheet_link_tag "RWD/mobile", :media => "screen and (max-width: 543px)" %>
 <%= stylesheet_link_tag "RWD/tablet", :media => "screen and (min-width: 544px) and (max-width: 896px)" %>
 <%= stylesheet_link_tag "RWD/desktop", :media => "screen and (min-width: 897px)" %>
+<!--[if lt IE 9]>
+<%= stylesheet_link_tag "RWD/desktop", :media => "screen and (min-width: 897px)" %>
+<![endif]-->
 
 <%= stylesheet_link_tag "alertify" %>
 
