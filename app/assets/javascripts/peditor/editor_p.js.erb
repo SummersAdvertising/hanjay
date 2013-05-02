@@ -242,10 +242,10 @@ editor.paragraph = {
 
         if ( a.length > 0 ) {         
           paragraph.link = a.attr('href');          
-          paragraph.content = a.html();
+          paragraph.content = editor.HTMLfilter(a.html());
         }
         else {
-          paragraph.content = content.html();         
+          paragraph.content = editor.HTMLfilter(content.html());
         }
 
 		return paragraph;
