@@ -199,7 +199,7 @@ editor.list = {
         $(paragraphContainer).children('ul').children('li').each(function() {
         
 	        if ( $(this).html() ) {
-		        elements.push(editor.HTMLfilter( $(this).html() ) );
+		        elements.push($(this).html());
 	        }
         });
         

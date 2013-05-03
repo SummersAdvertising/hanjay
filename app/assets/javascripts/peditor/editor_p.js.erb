@@ -240,12 +240,12 @@ editor.paragraph = {
 
         var a = $(content).children('a:first');
 
-        if ( a.length > 0 ) {         
+        if ( a.length > 0 ) {
           paragraph.link = a.attr('href');          
-          paragraph.content = editor.HTMLfilter(a.html());
+          paragraph.content = a.html().replace(/"/g, '&quot');
         }
         else {
-          paragraph.content = editor.HTMLfilter(content.html());
+          paragraph.content = content.html().replace(/"/g, '&quot'); 
         }
 
 		return paragraph;

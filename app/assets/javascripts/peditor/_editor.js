@@ -166,7 +166,7 @@ var editor = {
 		}
 	},
 	HTMLfilter: function(text){
-        return String(text).replace(/[\"<>& ]/g, function(all){
+        return String(text).replace(/["<>& ]/g, function(all){
             return "&" + {
                 '"': 'quot',
                 '<': 'lt',
