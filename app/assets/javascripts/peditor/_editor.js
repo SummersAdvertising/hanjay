@@ -80,6 +80,7 @@ var editor = {
 		if(upload){
 			article.push(upload);
 		}
+		
 		$("#"+editor.settings.articleModel+"_content").val(JSON.stringify(article));
 
 		editor.save(editor.ajaxupdate);

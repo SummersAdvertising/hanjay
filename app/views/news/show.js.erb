@@ -1,5 +1,5 @@
 function temp_<%= @news.id %>() {	
-	var newsContent = '<%=@news.content.gsub(/\\/, '\\').html_safe%>';
+	var newsContent = '<%=@news.content.html_safe%>';
 	
 	var newsContainer = $('<div class="news">');
 	var titleContainer = $('<div class="title">').append(
