@@ -167,15 +167,14 @@ var editor = {
 		}
 	},
 	HTMLfilter: function(text){
-        return String(text).replace(/["<>& ]/g, function(all){
+        return String(text).replace(/["<>&]/g, function(all){
             return "&" + {
                 '"': 'quot',
                 '<': 'lt',
                 '>': 'gt',
-                '&': 'amp',
-                ' ': 'nbsp'
+                '&': 'amp'
             }[all] + ";";
-        }).replace(/\n/g, "<br>");
+        }).replace(/  /g, "&nbsp;&nbsp;").replace(/\n/g, "<br>");
     },
     HTMLparser: function(text){
         return text.replace(/&quot;/g, '"').replace(/&lt;/g, '<').replace(/&gt;/g, '>').replace(/&amp;/g, '&').replace(/&nbsp;/g, ' ').replace(/<br[ \/]*>/g, "\n");
