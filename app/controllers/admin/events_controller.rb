@@ -9,7 +9,7 @@ class Admin::EventsController < ApplicationController
 		
 		case params[ :status ]
 			when "disable"
-				where_clause = "status <> 'enable' AND date > '#{Time.now.tomorrow.at_beginning_of_day.to_s}'"
+				where_clause = "status <> 'enable'"
 			when "expired"
 				where_clause = "date < '#{Time.now.tomorrow.at_beginning_of_day.to_s}'"
 			else
