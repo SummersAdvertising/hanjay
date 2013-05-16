@@ -19,7 +19,7 @@ class EventsController < ApplicationController
 	
 private
 	def get_events		
-		@events = Event.where( "status = ? AND date > ?  ","enable", Time.now.tomorrow ).order( "date DESC" )
+		@events = Event.where( "status = ? AND date > ?  ","enable", Time.now.tomorrow.beginning_of_day ).order( "date DESC" )
 	end	
 	
 end
