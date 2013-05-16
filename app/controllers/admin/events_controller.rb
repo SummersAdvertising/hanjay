@@ -13,7 +13,7 @@ class Admin::EventsController < ApplicationController
 			when "expired"
 				where_clause = "date < '#{Time.now.tomorrow.at_beginning_of_day.to_s}'"
 			else
-				where_clause = "status = 'enable' AND date > '#{Time.now.tomorrow.at_beginning_of_day.to_s}'"
+				where_clause = "status = 'enable' AND date >= '#{Time.now.tomorrow.at_beginning_of_day.to_s}'"
 				
 		end
 		
