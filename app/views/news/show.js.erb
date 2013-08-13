@@ -21,7 +21,6 @@ function temp_<%= @news.id %>() {
 		if(!$side_text.is(':visible')){
 			$('.news .text:visible').slideUp();
 		}
-		$side_text.resize(function() { console.log($(this).height()); });
 		$side_text.slideToggle(function() {
 	     $('html, body').animate({
 	         scrollTop: $side_text.offset().top - 120
