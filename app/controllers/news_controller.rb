@@ -20,7 +20,7 @@ class NewsController < ApplicationController
 	    
 	    $title = @f_news.name
 	    $meta_content = ''
-	    articles = JSON.parse(@f_news.content.gsub('\\', ''))
+	    articles = JSON.parse(@c_news.content.gsub('\\', ''))
 	    	    
 	    articles[0..3].each do | a |
 	    
