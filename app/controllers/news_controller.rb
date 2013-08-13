@@ -24,7 +24,7 @@ class NewsController < ApplicationController
 	    	    
 	    articles[0..3].each do | a |
 	    
-	    next if a.nil?	    
+	    next if a.nil? || a["type"] != 'paragraph'    
 	    	$meta_content += a["content"]	    
 	    end
 	    
