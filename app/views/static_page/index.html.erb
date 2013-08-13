@@ -161,7 +161,7 @@ $(document).ready(function(){
       <% @news.each do | news | %>
         <tr>
           <td width="22%">+   <%= news.date.to_s(:date_slashed) %></td>
-          <td width="78%"><%= link_to news.name, news_index_path + "#" + news.id.to_s %></td>
+          <td width="78%"><%= link_to news.name, news_path(news.id.to_s) %></td>
         </tr>      
       <% end %>          
       </table>

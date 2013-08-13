@@ -11,12 +11,17 @@ class NewsController < ApplicationController
     end
   end
   def show
-    @news = News.find(params[:id])
 
     respond_to do |format|
-      format.html # show.html.erb
-      format.js
-      format.json { render json: @news }
+      format.html { 
+	    @news = News.where( "status = 'enable'" ).order('date DESC')
+	    @f_news = News.find(params[:id])
+      	render :index 
+      }
+      format.js {
+	    @news = News.find(params[:id])
+	      
+      }
     end
   end
 end

@@ -21,14 +21,18 @@ function temp_<%= @news.id %>() {
 		if(!$side_text.is(':visible')){
 			$('.news .text:visible').slideUp();
 		}
-		$side_text.slideToggle();
+		$side_text.resize(function() { console.log($(this).height()); });
+		$side_text.slideToggle(function() {
+	     $('html, body').animate({
+	         scrollTop: $side_text.offset().top - 120
+	     }, 1000);
+		});
+		
 	}).siblings().hide();
 	
-	if ( "<%= @news.id %>" == window.location.hash.substr(8) ) {
+	if ( "<%= @news.id %>" == window.location.hash.substr(8) || window.location.href.search('news/<%= @news.id %>') > -1 ) {
 		titleContainer.click();
-	     $('html, body').animate({
-	         scrollTop: newsContainer.siblings().eq(newsContainer.index()-1).offset().top - newsContainer.siblings().eq(0).height()/2 - 150
-	     }, 1000);
+		
 	}
 }
 temp_<%= @news.id %>();
