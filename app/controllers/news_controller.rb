@@ -16,6 +16,17 @@ class NewsController < ApplicationController
       format.html { 
 	    @news = News.where( "status = 'enable'" ).order('date DESC')
 	    @f_news = News.find(params[:id])
+	    
+	    $title = @f_news.name
+	    $meta_content = ''
+	    articles = JSON.parse(@f_news.content.gsub('\\', ''))
+	    	    
+	    articles[0..3].each do | a |
+	    
+	    next if a.nil?	    
+	    	$meta_content += a["content"]	    
+	    end
+	    
       	render :index 
       }
       format.js {
