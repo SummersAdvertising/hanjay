@@ -15,7 +15,8 @@ class NewsController < ApplicationController
     respond_to do |format|
       format.html { 
 	    @news = News.where( "status = 'enable'" ).order('date DESC')
-	    @f_news = News.find(params[:id])
+	    @f_news = @news.first
+	    @c_news = News.find(params[:id])
 	    
 	    $title = @f_news.name
 	    $meta_content = ''
