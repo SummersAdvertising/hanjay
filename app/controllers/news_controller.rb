@@ -18,7 +18,7 @@ class NewsController < ApplicationController
 	    @f_news = @news.first
 	    @c_news = News.find(params[:id])
 	    
-	    $title = @f_news.name
+	    $title = @c_news.name
 	    $meta_content = ''
 	    articles = JSON.parse(@c_news.content.gsub('\\', ''))
 	    	    
